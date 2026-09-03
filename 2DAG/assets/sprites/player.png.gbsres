@@ -340,7 +340,7 @@
       ]
     }
   ],
-  "numTiles": 12,
+  "numTiles": 8,
   "canvasOriginX": 0,
   "canvasOriginY": 0,
   "canvasWidth": 16,
@@ -353,5 +353,5 @@
   "filename": "player.png",
   "width": 96,
   "height": 16,
-  "checksum": "57d62a82877b5ce98f9b55b066672b11a74541af"
+  "checksum": "9c29bb9416d793793c9b81d6f7e723a97cfe3df6"
 }

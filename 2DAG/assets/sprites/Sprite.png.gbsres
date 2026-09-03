@@ -112,7 +112,7 @@
       ]
     }
   ],
-  "numTiles": 2,
+  "numTiles": 1,
   "canvasOriginX": 0,
   "canvasOriginY": 0,
   "canvasWidth": 16,
@@ -125,5 +125,5 @@
   "filename": "Sprite.png",
   "width": 16,
   "height": 16,
-  "checksum": "bc8d4b473e9525dcdd19465a61069e78ca88fa1a"
+  "checksum": "ea4d7780dc814834074cd07aa1ad568346f19cc8"
 }

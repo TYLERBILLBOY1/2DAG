@@ -340,7 +340,7 @@
       ]
     }
   ],
-  "numTiles": 12,
+  "numTiles": 8,
   "canvasOriginX": 0,
   "canvasOriginY": 0,
   "canvasWidth": 16,
@@ -353,5 +353,5 @@
   "filename": "npc003.png",
   "width": 96,
   "height": 16,
-  "checksum": "a0c294cf5d64aee5d8748e5cbeafc8ea9e4cf8dd"
+  "checksum": "de4446466c8f93e95c43a6acfeff2de77af4e323"
 }
