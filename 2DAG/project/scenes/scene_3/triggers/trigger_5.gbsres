@@ -1,0 +1,101 @@
+{
+  "_resourceType": "trigger",
+  "id": "6d070ca8-0b42-4d36-a3d4-1377f8a7d394",
+  "name": "",
+  "prefabId": "",
+  "x": 35,
+  "y": 5,
+  "symbol": "trigger_8",
+  "prefabScriptOverrides": {},
+  "width": 1,
+  "height": 1,
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Oh theres a\ncontrol panel."
+        ],
+        "__section": "text",
+        "avatarId": "",
+        "minHeight": 4,
+        "maxHeight": 7,
+        "textX": 1,
+        "textY": 1,
+        "textHeight": 5,
+        "position": "bottom",
+        "clearPrevious": true,
+        "showFrame": "true",
+        "speedIn": -1,
+        "speedOut": -1,
+        "closeWhen": "key",
+        "closeButton": "a",
+        "closeDelayTime": 0.5,
+        "closeDelayFrames": 30
+      },
+      "id": "b5a5b0fa-4901-4eab-93e9-4fbac653ad17"
+    },
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Theres a big red\nbutton maybe it\nturns on the power."
+        ],
+        "__section": "text",
+        "avatarId": "",
+        "minHeight": 4,
+        "maxHeight": 7,
+        "textX": 1,
+        "textY": 1,
+        "textHeight": 5,
+        "position": "bottom",
+        "clearPrevious": true,
+        "showFrame": "true",
+        "speedIn": -1,
+        "speedOut": -1,
+        "closeWhen": "key",
+        "closeButton": "a",
+        "closeDelayTime": 0.5,
+        "closeDelayFrames": 30
+      },
+      "id": "3686bb15-db20-4818-ba25-dd012d881c46"
+    },
+    {
+      "command": "EVENT_CHOICE",
+      "args": {
+        "variable": "6",
+        "trueText": "Press button",
+        "falseText": "Exit"
+      },
+      "id": "af98a9eb-cf42-49f6-b621-5b88839e545d"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "6"
+        },
+        "__collapseElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "2",
+              "value": {
+                "type": "true"
+              }
+            },
+            "id": "6320cd2d-a5f2-4164-9638-cb2715322003"
+          }
+        ],
+        "false": []
+      },
+      "id": "babbfdd7-9850-4f9b-b230-e1e525d611cf"
+    }
+  ],
+  "leaveScript": [],
+  "_index": 4
+}

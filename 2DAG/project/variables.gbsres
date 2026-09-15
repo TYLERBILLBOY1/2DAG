@@ -3,18 +3,18 @@
   "variables": [
     {
       "id": "0",
-      "name": "Seen Cat",
-      "symbol": "var_seen_cat"
+      "name": "foundShip",
+      "symbol": "var_foundship"
     },
     {
       "id": "1",
-      "name": "Seen duck",
-      "symbol": "var_seen_duck"
+      "name": "foundAlien",
+      "symbol": "var_foundalien"
     },
     {
       "id": "2",
-      "name": "Used Radio",
-      "symbol": "var_used_radio"
+      "name": "powerOn",
+      "symbol": "var_poweron"
     },
     {
       "id": "3",
@@ -23,18 +23,18 @@
     },
     {
       "id": "4",
-      "name": "Quest1",
-      "symbol": "var_quest1"
+      "name": "enterShip",
+      "symbol": "var_entership"
     },
     {
       "id": "5",
-      "name": "Quest2",
-      "symbol": "var_quest2"
+      "name": "exitShip",
+      "symbol": "var_exitship"
     },
     {
       "id": "6",
-      "name": "Quest3",
-      "symbol": "var_quest3"
+      "name": "pressButton",
+      "symbol": "var_pressbutton"
     },
     {
       "id": "7",
@@ -65,6 +65,11 @@
       "id": "12",
       "name": "PushedIceBlock",
       "symbol": "var_pushediceblock"
+    },
+    {
+      "id": "512f8c87-fad6-4bab-8eb3-32f2a1f3ad6c__L0",
+      "name": "cryoUnlocked",
+      "symbol": "var_cryounlocked"
     }
   ],
   "constants": []

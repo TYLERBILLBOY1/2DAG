@@ -1,0 +1,129 @@
+{
+  "_resourceType": "sprite",
+  "id": "02dce7bb-1354-478b-acbb-0a4a1cbd14c7",
+  "name": "AlienBottom",
+  "symbol": "sprite_alienbottom",
+  "states": [
+    {
+      "id": "7d369c1d-8422-4b4b-8705-c0cd19285d15",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": false,
+      "animations": [
+        {
+          "id": "ee65a5d1-4a7b-4152-99b9-5595639ae80a",
+          "frames": [
+            {
+              "id": "8d3592ec-f313-4af3-bba5-a57538928c95",
+              "tiles": [
+                {
+                  "id": "71c32df1-3dd9-49a7-bd66-14a38b71201c",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "5a89318d-d223-4739-a4cb-b1fa56e1e5d8",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "67c6315c-bc81-4b1f-8449-c210fa918add",
+          "frames": [
+            {
+              "id": "4de4d85e-58a5-4638-9c0b-48b0f9cbd2f3",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "e8ed82c5-e810-4bb0-97c0-a6d1d6c3374a",
+          "frames": [
+            {
+              "id": "5d77b89c-622b-488a-b50a-089f99eb64c1",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "191cd5ec-5cd7-458f-bf43-e9cffa38e338",
+          "frames": [
+            {
+              "id": "77048ac3-6901-4410-9e60-41c4a8238755",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "9e2b4c9d-14ef-4e76-8426-b34e2821351e",
+          "frames": [
+            {
+              "id": "de2bf9e6-e8e5-43ef-a0e6-0b202d141e9d",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "c700d616-fa89-461d-983f-2c4a59874e99",
+          "frames": [
+            {
+              "id": "b4d341b2-0cf2-4208-a702-a46bdd2fdd62",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "b5ebe9fe-e7c6-41c7-92c5-07bbf5d324b8",
+          "frames": [
+            {
+              "id": "14c62636-ba37-421f-804f-9d99e67fc748",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "6e5e94e9-43f6-41ea-94ec-6b7fbf2d5008",
+          "frames": [
+            {
+              "id": "6b4ab222-95e3-4812-aa29-d3b5d3bd69e8",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 2,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 16,
+  "canvasHeight": 16,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "AlienBottom.png",
+  "width": 16,
+  "height": 16,
+  "checksum": "943ed1784bb3acdc7ac5ff818a470af468471c53"
+}

@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "22d2633d-a2ed-4e42-86f8-98b05dc5ab5b",
+  "name": "OutsideAlienPlanet",
+  "symbol": "bg_outsidealienplanet",
+  "tileColors": "",
+  "filename": "OutsideAlienPlanet.png",
+  "width": 33,
+  "height": 99,
+  "imageWidth": 264,
+  "imageHeight": 792
+}

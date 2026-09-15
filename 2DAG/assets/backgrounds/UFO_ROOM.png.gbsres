@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "cc4a216e-6916-43f4-bcd5-ec4268281bc2",
+  "name": "UFO_ROOM",
+  "symbol": "bg_ufo_room",
+  "tileColors": "00500+",
+  "filename": "UFO_ROOM.png",
+  "width": 64,
+  "height": 20,
+  "imageWidth": 512,
+  "imageHeight": 160
+}

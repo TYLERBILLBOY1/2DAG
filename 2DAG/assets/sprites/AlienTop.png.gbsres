@@ -1,0 +1,129 @@
+{
+  "_resourceType": "sprite",
+  "id": "1626311d-353d-4a5c-a2dd-67cac6468baa",
+  "name": "AlienTop",
+  "symbol": "sprite_alientop",
+  "states": [
+    {
+      "id": "893bc7fa-006a-49f5-a28c-5f4185c928dd",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": false,
+      "animations": [
+        {
+          "id": "1ee10203-45b7-4a89-b8c2-e85043a29a6f",
+          "frames": [
+            {
+              "id": "4a70da5f-206f-41ba-bc67-ff01b85954e8",
+              "tiles": [
+                {
+                  "id": "9d0d0650-f87e-4c10-afee-150bb5917f34",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "b31572b8-d1c5-45b4-98f6-87a8915ed854",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "04c5e9d6-e6af-4745-9a92-20dfeac3e302",
+          "frames": [
+            {
+              "id": "9bf02f3d-41e5-4fc7-a4bc-05c395b1a514",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "c0a26db4-b130-447c-9213-8c31a88c41ae",
+          "frames": [
+            {
+              "id": "56c01e6c-a47f-4293-8134-adbf02135579",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "6575b02e-938d-4c40-a805-5d6105f29f99",
+          "frames": [
+            {
+              "id": "b8f8ef46-8e4a-4f63-90ab-6fc3292eb6a6",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "19681544-4939-45f8-a44b-35f239f992d1",
+          "frames": [
+            {
+              "id": "929a7f09-e3a9-4a86-a096-f96270c21957",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "8da13007-9ab3-4694-93c4-f9cd11a7d8d5",
+          "frames": [
+            {
+              "id": "64335be1-fff2-4711-877c-4526aaffb39c",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "edfe4799-7c7c-4cb9-8530-d1ccdea80023",
+          "frames": [
+            {
+              "id": "179e9175-34b3-47ad-b487-3ae1d021523a",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "ce115095-1f3a-4d6d-8d09-7d474ed0998a",
+          "frames": [
+            {
+              "id": "f478b591-2e36-46f8-851d-439b07b008fb",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 2,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 16,
+  "canvasHeight": 16,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "AlienTop.png",
+  "width": 16,
+  "height": 16,
+  "checksum": "b17802ebe5ec8c68f99419d928a50271f9ecb3f6"
+}

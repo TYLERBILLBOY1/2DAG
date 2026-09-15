@@ -1,0 +1,162 @@
+{
+  "_resourceType": "trigger",
+  "id": "0dac6be8-ddee-4348-a56d-eaace798dc60",
+  "name": "",
+  "prefabId": "",
+  "x": 9,
+  "y": 85,
+  "symbol": "trigger_2",
+  "prefabScriptOverrides": {},
+  "width": 16,
+  "height": 12,
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "not",
+          "value": {
+            "type": "variable",
+            "value": "0"
+          }
+        },
+        "__collapseElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "WOAH a recked ship"
+              ],
+              "__section": "text",
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30
+            },
+            "id": "23a37b8b-a992-4bf4-85e8-e9f5972a07b8"
+          },
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "I can scrap it for\nparts."
+              ],
+              "__section": "text",
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30
+            },
+            "id": "578c06b3-32c1-4873-8ec2-a282635c1767"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "L0",
+              "value": {
+                "type": "true"
+              }
+            },
+            "id": "ef48e8c5-a203-4e69-a29f-3584dcf61737"
+          }
+        ],
+        "false": []
+      },
+      "id": "f6b3fce2-cbda-45a6-ac1c-ea7060c68ded"
+    },
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Would you like to\nenter?"
+        ],
+        "__section": "text",
+        "avatarId": "",
+        "minHeight": 4,
+        "maxHeight": 7,
+        "textX": 1,
+        "textY": 1,
+        "textHeight": 5,
+        "position": "bottom",
+        "clearPrevious": true,
+        "showFrame": "true",
+        "speedIn": -1,
+        "speedOut": -1,
+        "closeWhen": "key",
+        "closeButton": "a",
+        "closeDelayTime": 0.5,
+        "closeDelayFrames": 30
+      },
+      "id": "e39cea7e-dbab-4dd1-b280-845d753c68c3"
+    },
+    {
+      "command": "EVENT_CHOICE",
+      "args": {
+        "variable": "4",
+        "trueText": "Yes",
+        "falseText": "No"
+      },
+      "id": "d7fca97c-f19c-4c85-a8b8-2640053bc671"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "4"
+        },
+        "__collapseElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "5384848c-0246-4994-8c53-4e407e81fb31",
+              "x": {
+                "type": "number",
+                "value": 41
+              },
+              "y": {
+                "type": "number",
+                "value": 12
+              },
+              "direction": "left",
+              "fadeSpeed": "2"
+            },
+            "id": "47e19b48-0ff7-4220-8e02-e6fe501de8bb"
+          }
+        ],
+        "false": []
+      },
+      "id": "38cc7064-c079-43be-af5a-8e8446ff04a3"
+    }
+  ],
+  "leaveScript": [],
+  "_index": 1
+}

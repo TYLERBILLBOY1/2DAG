@@ -1,0 +1,129 @@
+{
+  "_resourceType": "sprite",
+  "id": "96bd9316-9d6c-4933-bcf2-35fe78784b14",
+  "name": "CryoJuice",
+  "symbol": "sprite_cryojuice",
+  "states": [
+    {
+      "id": "fd18a1ce-66e3-4773-a501-347008f3c944",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": false,
+      "animations": [
+        {
+          "id": "1f9991ba-c7bc-4e2c-b9ea-bd0606310dac",
+          "frames": [
+            {
+              "id": "7e800b22-84f9-4f23-99df-f4eab0f368cc",
+              "tiles": [
+                {
+                  "id": "c9c9efe9-79d2-494c-a09f-e124bb70234f",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "ddb56146-fd04-411d-86e5-920c6e0629dd",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fec4d783-fac5-4c7a-8932-cb713ec739ef",
+          "frames": [
+            {
+              "id": "21c5c990-7df9-41eb-9aa7-362362e242ad",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "9ac615ef-c20c-49ec-b08c-b157a0ecf0da",
+          "frames": [
+            {
+              "id": "46e5c2a3-5f31-4d05-afdd-57d855525789",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "0a688ffa-0390-4ec2-8f9c-655b3d7760d7",
+          "frames": [
+            {
+              "id": "eb202283-93bc-4084-8898-29371807b772",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "a3c70a36-585e-49f3-b514-07b23b57bac7",
+          "frames": [
+            {
+              "id": "4d5b1b99-7e16-4e37-a15f-5957f25128f6",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "c7a47366-7df8-4a35-bcf6-0830497a0c52",
+          "frames": [
+            {
+              "id": "90c6c081-723d-4d1b-a003-11192b4408eb",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "4a90cacf-905a-4543-8e17-5a94c0392470",
+          "frames": [
+            {
+              "id": "9c2764ae-2ab2-4463-8a37-b3317e36f760",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "6a47a566-b366-4eb6-a592-b7780f36061b",
+          "frames": [
+            {
+              "id": "1e2bc051-6cd7-4367-89b0-a6381f2e27ff",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 1,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 16,
+  "canvasHeight": 16,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "CryoJuice.png",
+  "width": 16,
+  "height": 16,
+  "checksum": "b748f6834b1f64ed09bc8f37a535b15befca0ee0"
+}
