@@ -1,7 +1,7 @@
 {
   "_resourceType": "trigger",
   "id": "97a71494-1526-4eef-ae4f-583117230b36",
-  "name": "",
+  "name": "Enter Electrical Room",
   "prefabId": "",
   "x": 36,
   "y": 9,
@@ -24,16 +24,16 @@
           {
             "command": "EVENT_SWITCH_SCENE",
             "args": {
-              "sceneId": "0383ebe6-f76a-43b2-a054-4f21446780e8",
+              "sceneId": "5ff7bfe8-4e1f-4702-92d4-b4c790bc3f2d",
               "x": {
                 "type": "number",
-                "value": 0
+                "value": 2
               },
               "y": {
                 "type": "number",
-                "value": 0
+                "value": 8
               },
-              "direction": "",
+              "direction": "right",
               "fadeSpeed": "2"
             },
             "id": "147d2068-3b65-453a-860d-a8a0b1b91bbf"

@@ -1,7 +1,7 @@
 {
   "_resourceType": "trigger",
   "id": "512f8c87-fad6-4bab-8eb3-32f2a1f3ad6c",
-  "name": "",
+  "name": "Enter Cryo Room",
   "prefabId": "",
   "x": 26,
   "y": 9,
@@ -27,7 +27,7 @@
             "args": {
               "condition": {
                 "type": "variable",
-                "value": "L0"
+                "value": "7"
               },
               "__collapseElse": true
             },
@@ -36,16 +36,16 @@
                 {
                   "command": "EVENT_SWITCH_SCENE",
                   "args": {
-                    "sceneId": "0383ebe6-f76a-43b2-a054-4f21446780e8",
+                    "sceneId": "154b563d-d0f0-4d0b-8d00-f4379900b2bf",
                     "x": {
                       "type": "number",
-                      "value": 0
+                      "value": 21
                     },
                     "y": {
                       "type": "number",
-                      "value": 0
+                      "value": 8
                     },
-                    "direction": "",
+                    "direction": "left",
                     "fadeSpeed": "2"
                   },
                   "id": "979e5776-ebf6-4a47-a7c2-35c6db601d59"

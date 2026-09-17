@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "4dfa2dd2-f810-4c81-bfef-6f94ace74582",
+  "name": "CryoRoom",
+  "symbol": "bg_cryoroom",
+  "tileColors": "",
+  "filename": "CryoRoom.png",
+  "width": 25,
+  "height": 18,
+  "imageWidth": 200,
+  "imageHeight": 144
+}

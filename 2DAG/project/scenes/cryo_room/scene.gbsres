@@ -1,0 +1,23 @@
+{
+  "_resourceType": "scene",
+  "id": "154b563d-d0f0-4d0b-8d00-f4379900b2bf",
+  "_index": 0,
+  "name": "Cryo Room",
+  "backgroundId": "4dfa2dd2-f810-4c81-bfef-6f94ace74582",
+  "tilesetId": "",
+  "width": 25,
+  "height": 18,
+  "type": "TOPDOWN",
+  "colorModeOverride": "none",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "collisions": "001a+0f17+002+0f!006+0f2+002+0f2+002+0f2+002+0f2+00!0f!002+0f!006+0f2+00!0f4+00!0f2+002+0f2+00!0f!002+0f!006+0f2+006+0f2+002+0f2+00!0f!002+0f!006+0f2+006+0f2+002+0f2+00!0f!002+0f!0015+0f!002+0f!0015+0f2+00!0f!0018+0f!0018+0f!0015+0f2+00!0f!0015+0f!002+0f!002+0f2+002+0f2+006+0f2+002+0f2+00!0f!002+0f!002+0f2+002+0f2+006+0f2+002+0f2+00!0f!002+0f!002+0f2+002+0f2+006+0f2+002+0f2+00!0f!002+0f!002+0f2+002+0f2+006+0f2+002+0f2+00!0f!002+0f17+001a+",
+  "autoFadeSpeed": 1,
+  "symbol": "scene_1",
+  "x": 280,
+  "y": 512,
+  "script": [],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": []
+}

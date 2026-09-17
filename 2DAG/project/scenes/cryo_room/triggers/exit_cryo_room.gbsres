@@ -1,31 +1,31 @@
 {
   "_resourceType": "trigger",
-  "id": "102d013e-90df-4f6d-9661-0029524d0e58",
-  "name": "",
+  "id": "217e8da9-7ad4-47f7-ac70-713939d806e5",
+  "name": "Exit Cryo Room",
   "prefabId": "",
-  "x": 9,
-  "y": 14,
-  "symbol": "trigger_0",
+  "x": 24,
+  "y": 8,
+  "symbol": "trigger_6",
   "prefabScriptOverrides": {},
-  "width": 2,
-  "height": 1,
+  "width": 1,
+  "height": 2,
   "script": [
     {
       "command": "EVENT_SWITCH_SCENE",
       "args": {
-        "sceneId": "0383ebe6-f76a-43b2-a054-4f21446780e8",
+        "sceneId": "5384848c-0246-4994-8c53-4e407e81fb31",
         "x": {
           "type": "number",
-          "value": 15
+          "value": 28
         },
         "y": {
           "type": "number",
-          "value": 3
+          "value": 9
         },
-        "direction": "down",
+        "direction": "right",
         "fadeSpeed": "2"
       },
-      "id": "e1da5ce0-4814-47ed-8d78-ea740fa9d403"
+      "id": "9fe5533d-30e4-4784-a88c-6c88701b7529"
     }
   ],
   "leaveScript": [],

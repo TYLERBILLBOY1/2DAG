@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "a213fe02-7a20-4a1b-adbb-efcaed221b58",
+  "name": "ElectricalRoom",
+  "symbol": "bg_electricalroom",
+  "tileColors": "",
+  "filename": "ElectricalRoom.png",
+  "width": 25,
+  "height": 18,
+  "imageWidth": 200,
+  "imageHeight": 144
+}

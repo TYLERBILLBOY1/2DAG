@@ -1,0 +1,23 @@
+{
+  "_resourceType": "scene",
+  "id": "5ff7bfe8-4e1f-4702-92d4-b4c790bc3f2d",
+  "_index": 4,
+  "name": "Electrical Room",
+  "backgroundId": "a213fe02-7a20-4a1b-adbb-efcaed221b58",
+  "tilesetId": "",
+  "width": 25,
+  "height": 18,
+  "type": "TOPDOWN",
+  "colorModeOverride": "none",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "collisions": "001a+0f17+002+0f!0015+0f!002+0f!0015+0f!002+0f!0015+0f!002+0f!0015+0f!002+0f!0015+0f!00!0f2+0015+0f!0018+0f!0018+0f!00!0f2+0015+0f!002+0f!0015+0f!002+0f!0015+0f!002+0f!0015+0f!002+0f!0015+0f!002+0f!0015+0f!002+0f17+001a+",
+  "autoFadeSpeed": 1,
+  "symbol": "scene_5",
+  "x": 520,
+  "y": 512,
+  "script": [],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": []
+}

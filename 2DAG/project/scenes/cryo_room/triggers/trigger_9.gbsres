@@ -1,0 +1,403 @@
+{
+  "_resourceType": "trigger",
+  "id": "d1fae44e-a7e5-42d6-9774-1f6713deeca5",
+  "name": "",
+  "prefabId": "",
+  "x": 12,
+  "y": 4,
+  "symbol": "trigger_17",
+  "prefabScriptOverrides": {},
+  "width": 2,
+  "height": 1,
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "CRYO POD CONTROLS"
+        ],
+        "__section": "text",
+        "avatarId": "",
+        "minHeight": 4,
+        "maxHeight": 7,
+        "textX": 1,
+        "textY": 1,
+        "textHeight": 5,
+        "position": "bottom",
+        "clearPrevious": true,
+        "showFrame": "true",
+        "speedIn": -1,
+        "speedOut": -1,
+        "closeWhen": "key",
+        "closeButton": "a",
+        "closeDelayTime": 0.5,
+        "closeDelayFrames": 30
+      },
+      "id": "da175e43-7a45-421e-a38b-64701141f577"
+    },
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "WHAT ACTION WOULD\nLIKE TO PREFORM"
+        ],
+        "__section": "text",
+        "avatarId": "",
+        "minHeight": 4,
+        "maxHeight": 7,
+        "textX": 1,
+        "textY": 1,
+        "textHeight": 5,
+        "position": "bottom",
+        "clearPrevious": true,
+        "showFrame": "true",
+        "speedIn": -1,
+        "speedOut": -1,
+        "closeWhen": "key",
+        "closeButton": "a",
+        "closeDelayTime": 0.5,
+        "closeDelayFrames": 30
+      },
+      "id": "6eef915c-185f-44e5-9009-fc1ab5ca80cb"
+    },
+    {
+      "command": "EVENT_MENU",
+      "args": {
+        "variable": "L0",
+        "items": 3,
+        "option1": "TIME IN CRYO",
+        "option2": "CURRENT STATUS",
+        "option3": "RELEASE",
+        "option4": "",
+        "option5": "",
+        "option6": "",
+        "option7": "",
+        "option8": "",
+        "cancelOnB": true,
+        "layout": "dialogue"
+      },
+      "id": "c9406c6b-f33f-42bd-b254-22493c45b9f2"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "L0"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 1
+          }
+        },
+        "__collapseElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "204,231 YEARS IN\nFROZEN"
+              ],
+              "__section": "text",
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30
+            },
+            "id": "a040fbf3-f767-4b46-b519-11da563abc4e"
+          }
+        ],
+        "false": []
+      },
+      "id": "12e9532e-d0c9-4357-b17b-c4d5c3de8175"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "L0"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 2
+          }
+        },
+        "__collapseElse": true,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_MENU",
+            "args": {
+              "variable": "L0",
+              "items": 8,
+              "option1": "POD 1",
+              "option2": "POD 2",
+              "option3": "POD 3",
+              "option4": "POD 4",
+              "option5": "POD 5",
+              "option6": "POD 6",
+              "option7": "POD 7",
+              "option8": "POD 8",
+              "cancelOnB": true,
+              "layout": "dialogue",
+              "__collapse": true
+            },
+            "id": "c8175004-e0ca-4e49-99a5-e50910cb59fe"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "lt",
+                "valueA": {
+                  "type": "variable",
+                  "value": "L0"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 8
+                }
+              },
+              "__collapseElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "STATUS: DECEASED"
+                    ],
+                    "__section": "text",
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 7,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 5,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": "true",
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a",
+                    "closeDelayTime": 0.5,
+                    "closeDelayFrames": 30,
+                    "__collapse": false
+                  },
+                  "id": "1de0b869-876d-44a3-9e88-ca617e2be069"
+                },
+                {
+                  "command": "EVENT_MENU",
+                  "args": {
+                    "variable": "L0",
+                    "items": 8,
+                    "option1": "POD 1",
+                    "option2": "POD 2",
+                    "option3": "POD 3",
+                    "option4": "POD 4",
+                    "option5": "POD 5",
+                    "option6": "POD 6",
+                    "option7": "POD 7",
+                    "option8": "POD 8",
+                    "cancelOnB": true,
+                    "layout": "dialogue",
+                    "__collapse": true
+                  },
+                  "id": "f9e70e3e-b09b-4b54-9e4a-4f679dfad897"
+                }
+              ],
+              "false": []
+            },
+            "id": "6fa551da-c8ce-492e-a09a-741b832eac45"
+          },
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "STATUS: ALIVE"
+              ],
+              "__section": "text",
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30,
+              "__collapse": false
+            },
+            "id": "3609d829-dd4c-4fd0-8520-c0aacd6df1fd"
+          },
+          {
+            "command": "EVENT_MENU",
+            "args": {
+              "variable": "L0",
+              "items": 8,
+              "option1": "POD 1",
+              "option2": "POD 2",
+              "option3": "POD 3",
+              "option4": "POD 4",
+              "option5": "POD 5",
+              "option6": "POD 6",
+              "option7": "POD 7",
+              "option8": "POD 8",
+              "cancelOnB": true,
+              "layout": "dialogue",
+              "__collapse": true
+            },
+            "id": "89a77bdf-7b27-43ef-b99c-e6fbed32b738"
+          }
+        ],
+        "false": []
+      },
+      "id": "a95de61a-fd19-4be1-885e-811738e9f587"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "L0"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 3
+          }
+        },
+        "__collapseElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_MENU",
+            "args": {
+              "variable": "L0",
+              "items": 8,
+              "option1": "POD 1",
+              "option2": "POD 2",
+              "option3": "POD 3",
+              "option4": "POD 4",
+              "option5": "POD 5",
+              "option6": "POD 6",
+              "option7": "POD 7",
+              "option8": "POD 8",
+              "cancelOnB": true,
+              "layout": "dialogue",
+              "__collapse": false
+            },
+            "id": "3f0bc1fc-02d9-4695-802b-cbfb54078a5f"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "lt",
+                "valueA": {
+                  "type": "variable",
+                  "value": "L0"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 8
+                }
+              },
+              "__collapseElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "UNABLE TO PREFORM\nTHAT ACTION"
+                    ],
+                    "__section": "text",
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 7,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 5,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": "true",
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a",
+                    "closeDelayTime": 0.5,
+                    "closeDelayFrames": 30
+                  },
+                  "id": "da4dee15-9395-44d7-aed9-9deec87e756c"
+                }
+              ],
+              "false": []
+            },
+            "id": "3d961b66-f1bb-4f99-a52f-fc9fe3afd73c"
+          },
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "UNFREEZING POD 8"
+              ],
+              "__section": "text",
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30
+            },
+            "id": "fe3929a7-1cd2-48b1-ad61-01ef254df051"
+          }
+        ],
+        "false": []
+      },
+      "id": "08e053ed-3d71-41bf-b488-ee5405b13682"
+    }
+  ],
+  "leaveScript": [],
+  "_index": 9
+}

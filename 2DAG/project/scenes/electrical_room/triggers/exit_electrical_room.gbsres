@@ -1,0 +1,33 @@
+{
+  "_resourceType": "trigger",
+  "id": "9748e81d-339e-414d-91e1-8d0dbc8ed536",
+  "name": "Exit Electrical Room",
+  "prefabId": "",
+  "x": 0,
+  "y": 8,
+  "symbol": "trigger_18",
+  "prefabScriptOverrides": {},
+  "width": 1,
+  "height": 2,
+  "script": [
+    {
+      "command": "EVENT_SWITCH_SCENE",
+      "args": {
+        "sceneId": "5384848c-0246-4994-8c53-4e407e81fb31",
+        "x": {
+          "type": "number",
+          "value": 33
+        },
+        "y": {
+          "type": "number",
+          "value": 9
+        },
+        "direction": "left",
+        "fadeSpeed": "2"
+      },
+      "id": "3a3ce884-bf9e-4788-a8f6-2bf0dc73fb8f"
+    }
+  ],
+  "leaveScript": [],
+  "_index": 1
+}

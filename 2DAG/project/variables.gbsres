@@ -38,8 +38,8 @@
     },
     {
       "id": "7",
-      "name": "Quest4",
-      "symbol": "var_quest4"
+      "name": "cryoUnlock",
+      "symbol": "var_cryounlock"
     },
     {
       "id": "8",
@@ -68,8 +68,13 @@
     },
     {
       "id": "512f8c87-fad6-4bab-8eb3-32f2a1f3ad6c__L0",
-      "name": "cryoUnlocked",
-      "symbol": "var_cryounlocked"
+      "name": "adad",
+      "symbol": "var_adad"
+    },
+    {
+      "id": "d1fae44e-a7e5-42d6-9774-1f6713deeca5__L0",
+      "name": "cryoPodControls",
+      "symbol": "var_cryopodcontrols"
     }
   ],
   "constants": []

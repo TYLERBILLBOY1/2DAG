@@ -1,0 +1,15 @@
+{
+  "_resourceType": "trigger",
+  "id": "6bd1feeb-fe60-49de-ac56-ac80433e5f69",
+  "name": "Right Engine Computer",
+  "prefabId": "",
+  "x": 13,
+  "y": 1,
+  "symbol": "trigger_21",
+  "prefabScriptOverrides": {},
+  "width": 2,
+  "height": 1,
+  "script": [],
+  "leaveScript": [],
+  "_index": 3
+}

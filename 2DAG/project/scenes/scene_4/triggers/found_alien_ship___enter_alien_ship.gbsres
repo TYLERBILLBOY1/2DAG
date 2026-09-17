@@ -1,7 +1,7 @@
 {
   "_resourceType": "trigger",
   "id": "0dac6be8-ddee-4348-a56d-eaace798dc60",
-  "name": "",
+  "name": "Found Alien Ship / Enter Alien Ship",
   "prefabId": "",
   "x": 9,
   "y": 85,

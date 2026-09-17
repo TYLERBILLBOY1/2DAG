@@ -1,7 +1,7 @@
 {
   "_resourceType": "trigger",
   "id": "ccbfa47a-7647-4d9d-8132-fd1886074bb5",
-  "name": "",
+  "name": "Exit Alien Ship",
   "prefabId": "",
   "x": 44,
   "y": 12,

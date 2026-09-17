@@ -1,15 +1,15 @@
 {
   "_resourceType": "trigger",
-  "id": "ced07592-0400-4d3b-96a2-65da0a10b78d",
-  "name": "",
+  "id": "a7ac4e6e-71c3-429d-bb49-a58f616d0a33",
+  "name": "Reactor Computer",
   "prefabId": "",
   "x": 9,
-  "y": 16,
-  "symbol": "trigger_6",
+  "y": 8,
+  "symbol": "trigger_22",
   "prefabScriptOverrides": {},
   "width": 2,
   "height": 1,
   "script": [],
   "leaveScript": [],
-  "_index": 0
+  "_index": 4
 }

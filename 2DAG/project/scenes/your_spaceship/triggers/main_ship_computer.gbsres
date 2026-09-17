@@ -1,0 +1,15 @@
+{
+  "_resourceType": "trigger",
+  "id": "5db7cb80-1a6b-4d5f-82fd-cd5e0398da01",
+  "name": "Main Ship Computer",
+  "prefabId": "",
+  "x": 9,
+  "y": 2,
+  "symbol": "trigger_7",
+  "prefabScriptOverrides": {},
+  "width": 2,
+  "height": 1,
+  "script": [],
+  "leaveScript": [],
+  "_index": 1
+}
