@@ -3,51 +3,234 @@
   "id": "872f61cf-bd62-4e58-92ee-a751e7335fe9",
   "name": "Init Menu",
   "symbol": "script_init_menu",
-  "description": "Attach Menu To Start Button",
+  "description": "Show the current objective",
   "variables": {},
   "actors": {},
   "script": [
     {
-      "id": "e0d0e206-405f-4630-be85-09266b48c735",
-      "command": "EVENT_GROUP",
+      "id": "75db380a-5b5f-4467-91e9-6099361ed6d2",
+      "command": "EVENT_SET_INPUT_SCRIPT",
       "args": {
-        "__label": "Attach Menu",
-        "__collapse": false
+        "input": [
+          "start"
+        ],
+        "persist": true
       },
       "children": {
         "true": [
           {
-            "id": "6286540a-2c0b-4474-a840-f59561712a0d",
-            "command": "EVENT_SET_INPUT_SCRIPT",
+            "id": "219d4391-659a-442f-aa2b-4f98c92f0c2b",
+            "command": "EVENT_IF",
             "args": {
-              "input": [
-                "start"
-              ],
-              "__collapse": false,
-              "persist": true
+              "condition": {
+                "type": "variable",
+                "value": "17"
+              }
             },
             "children": {
               "true": [
                 {
-                  "id": "fea801d2-740a-4d12-9296-e82b896dd184",
-                  "command": "EVENT_SCENE_PUSH_STATE",
-                  "args": {}
-                },
-                {
-                  "id": "cff0fc18-362f-4c1a-9554-3cfcf830a785",
-                  "command": "EVENT_SWITCH_SCENE",
+                  "id": "db4b40b6-7b29-4e75-918f-4a717fde695c",
+                  "command": "EVENT_TEXT",
                   "args": {
-                    "sceneId": "fd223a5f-7148-4705-98a7-b0ef56cb5c74",
-                    "x": {
-                      "type": "number",
-                      "value": 0
-                    },
-                    "y": {
-                      "type": "number",
-                      "value": 0
-                    },
-                    "direction": "",
-                    "fadeSpeed": "2"
+                    "text": [
+                      "YOUR GOAL\nUse your ship's\ncomputer. Launch!"
+                    ],
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 5,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 3,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": true,
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a"
+                  }
+                }
+              ],
+              "false": [
+                {
+                  "id": "3bbb3d36-f1a5-4b53-8d10-172954c47463",
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "variable",
+                      "value": "1"
+                    }
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "id": "604b822c-3b67-4122-a5af-90158565f89c",
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "YOUR GOAL\nTake the alien\nback to the ship.",
+                            "Your ship is at\nthe north end\nof the forest."
+                          ],
+                          "avatarId": "",
+                          "minHeight": 4,
+                          "maxHeight": 5,
+                          "textX": 1,
+                          "textY": 1,
+                          "textHeight": 3,
+                          "position": "bottom",
+                          "clearPrevious": true,
+                          "showFrame": true,
+                          "speedIn": -1,
+                          "speedOut": -1,
+                          "closeWhen": "key",
+                          "closeButton": "a"
+                        }
+                      }
+                    ],
+                    "false": [
+                      {
+                        "id": "6c905468-d7b7-4421-bbe0-5b9605a2bd75",
+                        "command": "EVENT_IF",
+                        "args": {
+                          "condition": {
+                            "type": "variable",
+                            "value": "7"
+                          }
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "id": "8256ebe9-c574-4085-a408-117b36b3d9b7",
+                              "command": "EVENT_TEXT",
+                              "args": {
+                                "text": [
+                                  "YOUR GOAL\nWake the\nliving alien.",
+                                  "Use the computer\nin the cryo room."
+                                ],
+                                "avatarId": "",
+                                "minHeight": 4,
+                                "maxHeight": 5,
+                                "textX": 1,
+                                "textY": 1,
+                                "textHeight": 3,
+                                "position": "bottom",
+                                "clearPrevious": true,
+                                "showFrame": true,
+                                "speedIn": -1,
+                                "speedOut": -1,
+                                "closeWhen": "key",
+                                "closeButton": "a"
+                              }
+                            }
+                          ],
+                          "false": [
+                            {
+                              "id": "30217e35-8cf2-4bac-b7e9-e131cbed5fe8",
+                              "command": "EVENT_IF",
+                              "args": {
+                                "condition": {
+                                  "type": "variable",
+                                  "value": "2"
+                                }
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "id": "c0d3b520-6b42-4362-97c5-eed2a20b6735",
+                                    "command": "EVENT_TEXT",
+                                    "args": {
+                                      "text": [
+                                        "YOUR GOAL\nUnlock the\ncryo room.",
+                                        "Read the clue in\nthe electrical\nroom.",
+                                        "Use its switches\nin order."
+                                      ],
+                                      "avatarId": "",
+                                      "minHeight": 4,
+                                      "maxHeight": 5,
+                                      "textX": 1,
+                                      "textY": 1,
+                                      "textHeight": 3,
+                                      "position": "bottom",
+                                      "clearPrevious": true,
+                                      "showFrame": true,
+                                      "speedIn": -1,
+                                      "speedOut": -1,
+                                      "closeWhen": "key",
+                                      "closeButton": "a"
+                                    }
+                                  }
+                                ],
+                                "false": [
+                                  {
+                                    "id": "f957aa20-de73-4cef-9375-15fb3b3a51d3",
+                                    "command": "EVENT_IF",
+                                    "args": {
+                                      "condition": {
+                                        "type": "variable",
+                                        "value": "0"
+                                      }
+                                    },
+                                    "children": {
+                                      "true": [
+                                        {
+                                          "id": "b8f90af0-99be-4340-be55-16b5c33ac83e",
+                                          "command": "EVENT_TEXT",
+                                          "args": {
+                                            "text": [
+                                              "YOUR GOAL\nTurn on the\nwreck's power.",
+                                              "Go up the ladder.\nUse the computer\nat the top."
+                                            ],
+                                            "avatarId": "",
+                                            "minHeight": 4,
+                                            "maxHeight": 5,
+                                            "textX": 1,
+                                            "textY": 1,
+                                            "textHeight": 3,
+                                            "position": "bottom",
+                                            "clearPrevious": true,
+                                            "showFrame": true,
+                                            "speedIn": -1,
+                                            "speedOut": -1,
+                                            "closeWhen": "key",
+                                            "closeButton": "a"
+                                          }
+                                        }
+                                      ],
+                                      "false": [
+                                        {
+                                          "id": "d4720d1f-ecd3-4438-8210-a34fb8a9f59f",
+                                          "command": "EVENT_TEXT",
+                                          "args": {
+                                            "text": [
+                                              "YOUR GOAL\nFind the wreck\nto the south.",
+                                              "Find a path\npast the trees."
+                                            ],
+                                            "avatarId": "",
+                                            "minHeight": 4,
+                                            "maxHeight": 5,
+                                            "textX": 1,
+                                            "textY": 1,
+                                            "textHeight": 3,
+                                            "position": "bottom",
+                                            "clearPrevious": true,
+                                            "showFrame": true,
+                                            "speedIn": -1,
+                                            "speedOut": -1,
+                                            "closeWhen": "key",
+                                            "closeButton": "a"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
                   }
                 }
               ]

@@ -4,12 +4,150 @@
   "name": "Main Ship Computer",
   "prefabId": "",
   "x": 9,
-  "y": 2,
+  "y": 3,
   "symbol": "trigger_7",
   "prefabScriptOverrides": {},
   "width": 2,
   "height": 1,
-  "script": [],
+  "script": [
+    {
+      "id": "2fe46660-52e9-4f4a-ae43-2dec9621020f",
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "17"
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "id": "a5e01cc3-96ca-4ebb-ab0e-38d58081ea57",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Your ship is\nready to fly."
+              ],
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 5,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 3,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": true,
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a"
+            }
+          },
+          {
+            "id": "e343ea88-4f2b-4fc0-8dd4-bc98020e2fdc",
+            "command": "EVENT_MENU",
+            "args": {
+              "variable": "6",
+              "items": 2,
+              "option1": "Launch",
+              "option2": "Stay",
+              "cancelOnB": true,
+              "cancelOnLastOption": false,
+              "layout": "dialogue"
+            }
+          },
+          {
+            "id": "52673953-4671-4da1-ac2d-15ceae4ede98",
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "6"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 1
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "id": "33a324bf-d243-46fe-8732-e14533aac980",
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Course set\nfor home.",
+                      "ALIEN: Ready?\nYOU: Let's go!"
+                    ],
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 5,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 3,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": true,
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a",
+                    "__collapse": false
+                  }
+                },
+                {
+                  "id": "9453949b-ea3e-4b50-9da9-3ddf51c7bcd5",
+                  "command": "EVENT_SWITCH_SCENE",
+                  "args": {
+                    "sceneId": "a346e55a-ed27-569b-a4f7-edc135d36b36",
+                    "x": {
+                      "type": "number",
+                      "value": 9
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 8
+                    },
+                    "direction": "down",
+                    "fadeSpeed": "2"
+                  }
+                }
+              ],
+              "false": []
+            }
+          }
+        ],
+        "false": [
+          {
+            "id": "c91577d1-02f9-4eeb-b1b0-c8a861d0be10",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Your ship needs\nrepairs.",
+                "Look for help\nat the wreck\nbeyond the trees."
+              ],
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 5,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 3,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": true,
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a"
+            }
+          }
+        ]
+      }
+    }
+  ],
   "leaveScript": [],
   "_index": 1
 }

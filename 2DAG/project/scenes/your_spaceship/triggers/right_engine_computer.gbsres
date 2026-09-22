@@ -4,12 +4,73 @@
   "name": "Right Engine Computer",
   "prefabId": "",
   "x": 13,
-  "y": 1,
+  "y": 2,
   "symbol": "trigger_21",
   "prefabScriptOverrides": {},
   "width": 2,
   "height": 1,
-  "script": [],
+  "script": [
+    {
+      "id": "cf9d7da9-86d8-47a8-b98c-6aa54f23a5aa",
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "17"
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "id": "16a38512-3388-4106-8ebc-62bf42c968a5",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "The engine works!\nReady to leave."
+              ],
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 5,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 3,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": true,
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a"
+            }
+          }
+        ],
+        "false": [
+          {
+            "id": "e5dd2c7d-4943-4927-98eb-313c1a3ed232",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "The engine is\nbroken. I need\nhelp to fix it."
+              ],
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 5,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 3,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": true,
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a"
+            }
+          }
+        ]
+      }
+    }
+  ],
   "leaveScript": [],
   "_index": 3
 }

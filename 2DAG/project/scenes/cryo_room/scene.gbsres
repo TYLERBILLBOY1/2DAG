@@ -11,12 +11,92 @@
   "colorModeOverride": "none",
   "paletteIds": [],
   "spritePaletteIds": [],
-  "collisions": "001a+0f17+002+0f!006+0f2+002+0f2+002+0f2+002+0f2+00!0f!002+0f!006+0f2+00!0f4+00!0f2+002+0f2+00!0f!002+0f!006+0f2+006+0f2+002+0f2+00!0f!002+0f!006+0f2+006+0f2+002+0f2+00!0f!002+0f!0015+0f!002+0f!0015+0f2+00!0f!0018+0f!0018+0f!0015+0f2+00!0f!0015+0f!002+0f!002+0f2+002+0f2+006+0f2+002+0f2+00!0f!002+0f!002+0f2+002+0f2+006+0f2+002+0f2+00!0f!002+0f!002+0f2+002+0f2+006+0f2+002+0f2+00!0f!002+0f!002+0f2+002+0f2+006+0f2+002+0f2+00!0f!002+0f17+001a+",
+  "collisions": "001a+0f17+002+0f!002+0f2+002+0f2+002+0f2+002+0f2+002+0f2+00!0f!002+0f!002+0f2+002+0f2+00!0f4+00!0f2+002+0f2+00!0f!002+0f!002+0f2+002+0f2+006+0f2+002+0f2+00!0f!002+0f!002+0f2+002+0f2+006+0f2+002+0f2+00!0f!002+0f!0015+0f!002+0f!0015+0f2+00!0f!0018+0f!0018+0f!0015+0f2+00!0f!0015+0f!002+0f!002+0f2+002+0f2+006+0f2+002+0f2+00!0f!002+0f!002+0f2+002+0f2+006+0f2+002+0f2+00!0f!002+0f!002+0f2+002+0f2+006+0f2+002+0f2+00!0f!002+0f!002+0f2+002+0f2+006+0f2+002+0f2+00!0f!002+0f17+001a+",
   "autoFadeSpeed": 1,
   "symbol": "scene_1",
   "x": 280,
   "y": 512,
-  "script": [],
+  "script": [
+    {
+      "id": "a8fbbacb-51da-47b5-8ad3-11fc7f0f201d",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl b_resetAlien, _resetAlien\nVM_CALL_NATIVE b_resetAlien, _resetAlien",
+        "references": [],
+        "__label": "Alien Start"
+      }
+    },
+    {
+      "id": "9cb35eb3-385d-4d34-ad81-3609618e0301",
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "872f61cf-bd62-4e58-92ee-a751e7335fe9"
+      }
+    },
+    {
+      "id": "a91c4753-7196-4b8c-834d-17780336253c",
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "19"
+        }
+      },
+      "children": {
+        "true": [],
+        "false": [
+          {
+            "id": "efd34a5e-3685-4e3d-88ef-ac25369d91b8",
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "19",
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            }
+          },
+          {
+            "id": "8c436678-98b0-4471-9e21-bcdadddc9834",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Eight frozen\ncrew members...",
+                "One is still\nalive! I need\nto wake him up."
+              ],
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 5,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 3,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": true,
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "8e4c7221-9baf-413f-b29c-c015498c414a",
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "1"
+        }
+      },
+      "children": {
+        "true": [],
+        "false": []
+      }
+    }
+  ],
   "playerHit1Script": [],
   "playerHit2Script": [],
   "playerHit3Script": []

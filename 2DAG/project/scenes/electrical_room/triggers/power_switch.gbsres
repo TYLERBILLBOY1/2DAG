@@ -1,0 +1,186 @@
+{
+  "_resourceType": "trigger",
+  "id": "0f7d6071-d0bc-57da-a681-6692b0360b4b",
+  "prefabId": "",
+  "prefabScriptOverrides": {},
+  "_index": 3,
+  "name": "Power Switch",
+  "x": 5,
+  "y": 11,
+  "width": 4,
+  "height": 1,
+  "script": [
+    {
+      "id": "57ec74b4-0550-4421-afda-ed5b37d1a394",
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "7"
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "id": "9083970c-f0f7-4b5c-9779-791e6b2b5858",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "This switch\nis already on."
+              ],
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 5,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 3,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": true,
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a"
+            }
+          }
+        ],
+        "false": [
+          {
+            "id": "13d3028c-4e6c-4abe-9d0e-98c4abe7564d",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "LEFT SWITCH\nPower"
+              ],
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 5,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 3,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": true,
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a"
+            }
+          },
+          {
+            "id": "a38e685c-b551-485b-81ba-2c64c08be2d6",
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "14"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 1
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "id": "8651ded1-3627-43cd-9928-b7f655498848",
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "14",
+                    "value": {
+                      "type": "number",
+                      "value": 2
+                    }
+                  }
+                },
+                {
+                  "id": "b2474cce-3b10-4e03-bede-276fb7056b6c",
+                  "command": "EVENT_SOUND_PLAY_EFFECT",
+                  "args": {
+                    "type": "beep",
+                    "pitch": 5,
+                    "duration": 0.12,
+                    "wait": false
+                  }
+                },
+                {
+                  "id": "c49bbd07-8e01-4b0d-8e3b-6e14d5794496",
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Power is on.\nTwo are now on."
+                    ],
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 5,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 3,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": true,
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a"
+                  }
+                }
+              ],
+              "false": [
+                {
+                  "id": "c242117a-f69e-46f4-afae-ab93f607dd06",
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "14",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  }
+                },
+                {
+                  "id": "c0de9fc7-2ca9-4569-8eb9-4c2f3cb3d254",
+                  "command": "EVENT_SOUND_PLAY_EFFECT",
+                  "args": {
+                    "type": "beep",
+                    "pitch": 1,
+                    "duration": 0.12,
+                    "wait": false
+                  }
+                },
+                {
+                  "id": "a89831c4-edcb-45a8-bd2a-6e9662859c50",
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Wrong order.\nAll the switches\nhave reset.",
+                      "Try again. Read\nthe clue on the\ncomputer above."
+                    ],
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 5,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 3,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": true,
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "leaveScript": [],
+  "symbol": "trigger_25"
+}

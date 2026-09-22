@@ -1,0 +1,131 @@
+{
+  "_resourceType": "scene",
+  "id": "a346e55a-ed27-569b-a4f7-edc135d36b36",
+  "_index": 6,
+  "name": "Ending",
+  "backgroundId": "70e2d37e-14f6-5996-8ad1-38b1980f4232",
+  "tilesetId": "",
+  "width": 20,
+  "height": 18,
+  "type": "TOPDOWN",
+  "colorModeOverride": "none",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "collisions": "0f168+",
+  "autoFadeSpeed": 1,
+  "symbol": "scene_7",
+  "x": 520,
+  "y": 30,
+  "script": [
+    {
+      "id": "24744258-d9b4-4976-a38e-69735268cdb3",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl b_resetAlien, _resetAlien\nVM_CALL_NATIVE b_resetAlien, _resetAlien",
+        "references": [],
+        "__label": "Alien Start"
+      }
+    },
+    {
+      "id": "ff6fd30f-3cf4-44bd-9939-bf1ccce701db",
+      "command": "EVENT_REMOVE_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "start"
+        ]
+      }
+    },
+    {
+      "id": "8f9dc68b-96ea-4a46-8308-1ddd8190043c",
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "player"
+      }
+    },
+    {
+      "id": "e8b57a5c-c9bf-4d03-809d-065dcd4242a5",
+      "command": "EVENT_SOUND_PLAY_EFFECT",
+      "args": {
+        "type": "beep",
+        "pitch": 7,
+        "duration": 0.12,
+        "wait": false
+      }
+    },
+    {
+      "id": "fd0b0f6f-c2aa-4cdc-880e-f0c7a7c8280c",
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "The engines\nstart up!"
+        ],
+        "avatarId": "",
+        "minHeight": 4,
+        "maxHeight": 5,
+        "textX": 1,
+        "textY": 1,
+        "textHeight": 3,
+        "position": "bottom",
+        "clearPrevious": true,
+        "showFrame": true,
+        "speedIn": -1,
+        "speedOut": -1,
+        "closeWhen": "key",
+        "closeButton": "a"
+      }
+    },
+    {
+      "id": "56bee2a1-f048-45b1-9fdb-f23f5eae60a0",
+      "command": "EVENT_CAMERA_SHAKE",
+      "args": {
+        "units": "frames",
+        "frames": 40,
+        "shakeDirection": "diagonal",
+        "magnitude": {
+          "type": "number",
+          "value": 2
+        }
+      }
+    },
+    {
+      "id": "64a32a78-1c9b-4c2e-92de-2cfd51141e91",
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "You leave the\nplanet with your\nnew friend.",
+          "youre going home.",
+          "THE END",
+          "Thanks for\nplaying!"
+        ],
+        "avatarId": "",
+        "minHeight": 4,
+        "maxHeight": 5,
+        "textX": 1,
+        "textY": 1,
+        "textHeight": 3,
+        "position": "bottom",
+        "clearPrevious": true,
+        "showFrame": true,
+        "speedIn": -1,
+        "speedOut": -1,
+        "closeWhen": "key",
+        "closeButton": "a"
+      }
+    },
+    {
+      "id": "86e4f41b-3a97-48cd-8e3f-7458fc817578",
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "24",
+        "value": {
+          "type": "number",
+          "value": 1
+        }
+      }
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": [],
+  "playerSpriteSheetId": "52ad34df-f245-4b2a-b94c-a82af1002871"
+}

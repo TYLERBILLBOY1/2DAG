@@ -11,89 +11,206 @@
   "height": 1,
   "script": [
     {
-      "command": "EVENT_TEXT",
-      "args": {
-        "text": [
-          "Oh theres a\ncontrol panel."
-        ],
-        "__section": "text",
-        "avatarId": "",
-        "minHeight": 4,
-        "maxHeight": 7,
-        "textX": 1,
-        "textY": 1,
-        "textHeight": 5,
-        "position": "bottom",
-        "clearPrevious": true,
-        "showFrame": "true",
-        "speedIn": -1,
-        "speedOut": -1,
-        "closeWhen": "key",
-        "closeButton": "a",
-        "closeDelayTime": 0.5,
-        "closeDelayFrames": 30
-      },
-      "id": "b5a5b0fa-4901-4eab-93e9-4fbac653ad17"
-    },
-    {
-      "command": "EVENT_TEXT",
-      "args": {
-        "text": [
-          "Theres a big red\nbutton maybe it\nturns on the power."
-        ],
-        "__section": "text",
-        "avatarId": "",
-        "minHeight": 4,
-        "maxHeight": 7,
-        "textX": 1,
-        "textY": 1,
-        "textHeight": 5,
-        "position": "bottom",
-        "clearPrevious": true,
-        "showFrame": "true",
-        "speedIn": -1,
-        "speedOut": -1,
-        "closeWhen": "key",
-        "closeButton": "a",
-        "closeDelayTime": 0.5,
-        "closeDelayFrames": 30
-      },
-      "id": "3686bb15-db20-4818-ba25-dd012d881c46"
-    },
-    {
-      "command": "EVENT_CHOICE",
-      "args": {
-        "variable": "6",
-        "trueText": "Press button",
-        "falseText": "Exit"
-      },
-      "id": "af98a9eb-cf42-49f6-b621-5b88839e545d"
-    },
-    {
+      "id": "a076adcd-29e0-4e5b-bc30-bbb78bc07f01",
       "command": "EVENT_IF",
       "args": {
         "condition": {
           "type": "variable",
-          "value": "6"
-        },
-        "__collapseElse": true
+          "value": "2"
+        }
       },
       "children": {
         "true": [
           {
-            "command": "EVENT_SET_VALUE",
+            "id": "08ba10b6-544a-4e27-918f-8e07aacb1a65",
+            "command": "EVENT_TEXT",
             "args": {
-              "variable": "2",
-              "value": {
-                "type": "true"
+              "text": [
+                "SHIP POWER: ON"
+              ],
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 5,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 3,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": true,
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a"
+            }
+          },
+          {
+            "id": "c4513ea7-b952-4d90-b769-b36092c10841",
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "variable",
+                "value": "7"
               }
             },
-            "id": "6320cd2d-a5f2-4164-9638-cb2715322003"
+            "children": {
+              "true": [
+                {
+                  "id": "4a9e534b-9425-4cc4-be26-27c033b79d0e",
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "The cryo room\nis unlocked."
+                    ],
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 5,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 3,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": true,
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a"
+                  }
+                }
+              ],
+              "false": [
+                {
+                  "id": "e7bcffe2-f212-4836-beb8-60c878d55f42",
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "The cryo room\nis still locked.",
+                      "Use the switches\nin the electrical\nroom to open it."
+                    ],
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 5,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 3,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": true,
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a"
+                  }
+                }
+              ]
+            }
           }
         ],
-        "false": []
-      },
-      "id": "babbfdd7-9850-4f9b-b230-e1e525d611cf"
+        "false": [
+          {
+            "id": "7f2bbe7c-43ee-47d4-b2de-172b6a59b889",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "The ship has\nno power.",
+                "Turn it on to\nopen the doors."
+              ],
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 5,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 3,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": true,
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a"
+            }
+          },
+          {
+            "id": "57b29528-3171-4bea-a220-18de8d96cd8e",
+            "command": "EVENT_MENU",
+            "args": {
+              "variable": "6",
+              "items": 2,
+              "option1": "Turn power on",
+              "option2": "Leave",
+              "cancelOnB": true,
+              "cancelOnLastOption": false,
+              "layout": "dialogue"
+            }
+          },
+          {
+            "id": "807e0390-24bd-486a-8e9a-11e185026f68",
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "6"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 1
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "id": "e229aae1-98c1-479e-b976-338e90290a15",
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "2",
+                    "value": {
+                      "type": "number",
+                      "value": 1
+                    }
+                  }
+                },
+                {
+                  "id": "5e798ee9-1d18-4c3e-8dab-076c769b4e30",
+                  "command": "EVENT_SOUND_PLAY_EFFECT",
+                  "args": {
+                    "type": "beep",
+                    "pitch": 6,
+                    "duration": 0.12,
+                    "wait": false
+                  }
+                },
+                {
+                  "id": "e0108cf2-8c5f-4747-8ef8-6519dee4d688",
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Power is back on!",
+                      "The RIGHT door\nleads to the\nelectrical room.",
+                      "Go there and\nunlock the\ncryo room."
+                    ],
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 5,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 3,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": true,
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a"
+                  }
+                }
+              ],
+              "false": []
+            }
+          }
+        ]
+      }
     }
   ],
   "leaveScript": [],

@@ -1,0 +1,112 @@
+{
+  "_resourceType": "trigger",
+  "id": "c8301def-a4c1-4e73-b53b-d0046169c490",
+  "name": "Switch Computer",
+  "prefabId": "",
+  "x": 11,
+  "y": 5,
+  "symbol": "trigger_19",
+  "prefabScriptOverrides": {},
+  "width": 4,
+  "height": 1,
+  "script": [
+    {
+      "id": "70b6f31f-eb0d-47f7-bd95-9fcbe30f9acc",
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "7"
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "id": "8329e41f-55c9-426f-9aca-6cab8112b6a0",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "All switches\nare on. The cryo\nroom is unlocked."
+              ],
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 5,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 3,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": true,
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a"
+            }
+          }
+        ],
+        "false": [
+          {
+            "id": "c0b8283f-534e-4b3d-bcd9-ee2e52a84458",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "DOOR LOCK GUIDE\nUse the switches\nin this order:",
+                "Cooling first.\nPower second.\nDoor lock last.",
+                "RIGHT: Cooling\nLEFT: Power\nMIDDLE: Door lock"
+              ],
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 5,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 3,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": true,
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a"
+            }
+          },
+          {
+            "id": "32a436a4-21fe-4fa0-bf09-2dbaba1eeccb",
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "14",
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            }
+          },
+          {
+            "id": "e62ddc1a-c537-4498-a547-7d783a6e504f",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "All switches\nare reset.",
+                "Walk up to each\nswitch to use it."
+              ],
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 5,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 3,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": true,
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "leaveScript": [],
+  "_index": 0
+}

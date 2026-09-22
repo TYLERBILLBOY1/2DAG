@@ -1,24 +1,24 @@
 {
   "_resourceType": "scene",
-  "id": "5ff7bfe8-4e1f-4702-92d4-b4c790bc3f2d",
-  "_index": 4,
-  "name": "Electrical Room",
-  "backgroundId": "21ae7422-e3ab-5ac4-9c6a-e98bb44a5d04",
+  "id": "0383ebe6-f76a-43b2-a054-4f21446780e8",
+  "_index": 3,
+  "name": "Outside Alien Planet",
+  "backgroundId": "22d2633d-a2ed-4e42-86f8-98b05dc5ab5b",
   "tilesetId": "",
-  "width": 25,
-  "height": 18,
+  "width": 33,
+  "height": 99,
   "type": "TOPDOWN",
   "colorModeOverride": "none",
   "paletteIds": [],
   "spritePaletteIds": [],
-  "collisions": "001a+0f17+002+0f!0015+0f!002+0f!009+0f4+008+0f!002+0f!009+0f4+008+0f!002+0f!0015+0f!002+0f!0015+0f!00!0f2+0015+0f!0018+0f!006+0f4+002+0f4+002+0f4+002+0f!00!0f2+003+0f4+002+0f4+002+0f4+002+0f!002+0f!0015+0f!002+0f!0015+0f!002+0f!0015+0f!002+0f!0015+0f!002+0f!0015+0f!002+0f17+001a+",
+  "collisions": "00cc3+",
   "autoFadeSpeed": 1,
-  "symbol": "scene_5",
-  "x": 520,
-  "y": 512,
+  "symbol": "scene_4",
+  "x": 800,
+  "y": 64,
   "script": [
     {
-      "id": "2e07beef-5faa-4632-8209-56a82faa696b",
+      "id": "65331be3-028b-4715-918d-0cdae15036aa",
       "command": "EVENT_GBVM_SCRIPT",
       "args": {
         "script": ".globl b_resetAlien, _resetAlien\nVM_CALL_NATIVE b_resetAlien, _resetAlien",
@@ -27,29 +27,29 @@
       }
     },
     {
-      "id": "c90801b0-0639-4b00-b7de-75e000be4e8f",
+      "id": "9ac0664b-cf2d-41e8-9fd1-46d46343e42c",
       "command": "EVENT_CALL_CUSTOM_EVENT",
       "args": {
         "customEventId": "872f61cf-bd62-4e58-92ee-a751e7335fe9"
       }
     },
     {
-      "id": "4a6cb6e8-7f3b-488d-8f09-49e2cd7766d0",
+      "id": "c9cdf966-03f4-4593-90b8-7734959548f1",
       "command": "EVENT_IF",
       "args": {
         "condition": {
           "type": "variable",
-          "value": "23"
+          "value": "22"
         }
       },
       "children": {
         "true": [],
         "false": [
           {
-            "id": "c87258c2-8779-453c-bd26-d8442c0062b6",
+            "id": "e37b5052-1ce3-4338-a7fb-69ce1a9940d9",
             "command": "EVENT_SET_VALUE",
             "args": {
-              "variable": "23",
+              "variable": "22",
               "value": {
                 "type": "number",
                 "value": 1
@@ -57,12 +57,12 @@
             }
           },
           {
-            "id": "669dee90-d873-4d5e-9120-662a6756e6f2",
+            "id": "34735996-377e-409b-aa8c-a11764971dff",
             "command": "EVENT_TEXT",
             "args": {
               "text": [
-                "Three switches.\nWhat order should\nI use them in?",
-                "The computer at\nthe top of this\nroom has a clue."
+                "The wreck is\nsouth of here.",
+                "Find a path\nthrough the trees\nto reach it."
               ],
               "avatarId": "",
               "minHeight": 4,
@@ -80,20 +80,6 @@
             }
           }
         ]
-      }
-    },
-    {
-      "id": "1e8fdc83-c9cc-4c89-a150-f0f03790b449",
-      "command": "EVENT_IF",
-      "args": {
-        "condition": {
-          "type": "variable",
-          "value": "1"
-        }
-      },
-      "children": {
-        "true": [],
-        "false": []
       }
     }
   ],

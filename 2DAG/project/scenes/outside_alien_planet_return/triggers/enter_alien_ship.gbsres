@@ -1,0 +1,82 @@
+{
+  "_resourceType": "trigger",
+  "id": "a646d549-81a3-552a-b338-ad1dc560ff5d",
+  "prefabId": "",
+  "prefabScriptOverrides": {},
+  "_index": 1,
+  "name": "Enter Alien Ship",
+  "x": 15,
+  "y": 85,
+  "width": 4,
+  "height": 1,
+  "script": [
+    {
+      "id": "62896cd6-9d24-48d0-b42d-84bd1dd0e661",
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "0"
+        }
+      },
+      "children": {
+        "true": [],
+        "false": [
+          {
+            "id": "a4ae238a-b1cd-4011-b54c-8e7a3655f9b8",
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "0",
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            }
+          },
+          {
+            "id": "8bd45f25-d4b5-448c-8316-a6957ea352b7",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "A ship in the\npond! I can reach\nits open hatch.",
+                "Maybe I'll find\nspare parts\ninside."
+              ],
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 5,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 3,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": true,
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "0553a5ce-d70c-4019-a109-447435fd491f",
+      "command": "EVENT_SWITCH_SCENE",
+      "args": {
+        "sceneId": "5384848c-0246-4994-8c53-4e407e81fb31",
+        "x": {
+          "type": "number",
+          "value": 41
+        },
+        "y": {
+          "type": "number",
+          "value": 12
+        },
+        "direction": "left",
+        "fadeSpeed": "2"
+      }
+    }
+  ],
+  "leaveScript": [],
+  "symbol": "trigger_26"
+}

@@ -16,7 +16,317 @@
   "symbol": "scene_2",
   "x": 224,
   "y": 112,
-  "script": [],
+  "script": [
+    {
+      "id": "c2d0f92d-0750-429a-8401-792dad22e73b",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl b_resetAlien, _resetAlien\nVM_CALL_NATIVE b_resetAlien, _resetAlien",
+        "references": [],
+        "__label": "Alien Start"
+      }
+    },
+    {
+      "id": "c0a32b0e-0635-44f6-8e45-7b7d05f3c8b1",
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "872f61cf-bd62-4e58-92ee-a751e7335fe9"
+      }
+    },
+    {
+      "id": "47d9d3ed-db6c-46cf-b734-d2cbcd3d177e",
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "13"
+        }
+      },
+      "children": {
+        "true": [],
+        "false": [
+          {
+            "id": "4860b723-2179-4404-8a02-374434e54124",
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "13",
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            }
+          },
+          {
+            "id": "7f183cc1-b484-444a-9a4b-591ae35720f1",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Almost home.\nJust a little\nfarther..."
+              ],
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 5,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 3,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": true,
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a"
+            }
+          },
+          {
+            "id": "9d9c8f9a-8283-4947-afdf-2af7ad83e4ee",
+            "command": "EVENT_SOUND_PLAY_EFFECT",
+            "args": {
+              "type": "beep",
+              "pitch": 2,
+              "duration": 0.12,
+              "wait": false
+            }
+          },
+          {
+            "id": "87cfb48f-d9b9-4b1b-8bd8-c0ee1c35a29b",
+            "command": "EVENT_CAMERA_SHAKE",
+            "args": {
+              "units": "frames",
+              "frames": 40,
+              "shakeDirection": "diagonal",
+              "magnitude": {
+                "type": "number",
+                "value": 2
+              }
+            }
+          },
+          {
+            "id": "82d6026d-77b8-4051-b358-339035658c90",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "WARNING!\nEngine failure!\nLanding now!"
+              ],
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 5,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 3,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": true,
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a"
+            }
+          },
+          {
+            "id": "52d0460f-fd57-4df7-a2df-65fe209964e3",
+            "command": "EVENT_FADE_OUT",
+            "args": {
+              "speed": "2"
+            }
+          },
+          {
+            "id": "dadc8ef8-4aff-43d5-a89f-fd6b6abebf14",
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": {
+                "type": "number",
+                "value": 0.6
+              }
+            }
+          },
+          {
+            "id": "57623cc1-c22d-4d8d-85ce-e679bb7820df",
+            "command": "EVENT_FADE_IN",
+            "args": {
+              "speed": "2"
+            }
+          },
+          {
+            "id": "9f1da4a3-2372-44c1-8898-1cb4310ab72c",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "I landed safely,\nbut my engine\nis broken.",
+                "The scanner found\na wreck nearby.",
+                "It may have\nspare parts.",
+                "ARROWS: Move\nZ / J: Confirm\nSTART: Your goal"
+              ],
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 5,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 3,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": true,
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "c7aa369b-47a8-4c8f-ae92-47ca80633190",
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "1"
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "id": "66e017b8-c540-4e9c-8ff5-d7c55ad9675a",
+            "command": "EVENT_ACTOR_SET_POSITION",
+            "args": {
+              "actorId": "c77532bf-ca28-5e20-b40e-f3bab0325584",
+              "x": {
+                "type": "number",
+                "value": 11
+              },
+              "y": {
+                "type": "number",
+                "value": 11
+              },
+              "units": "tiles"
+            }
+          },
+          {
+            "id": "11af6930-053b-4a85-9dff-4f10abc356a7",
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "variable",
+                "value": "17"
+              }
+            },
+            "children": {
+              "true": [],
+              "false": [
+                {
+                  "id": "f1b64455-a9d6-4133-a7eb-8a3089f15f6c",
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "ALIEN:\nLet me take\na look at it."
+                    ],
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 5,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 3,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": true,
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a"
+                  }
+                },
+                {
+                  "id": "6c3c2c14-b2cd-47e3-b879-fb8692641b4a",
+                  "command": "EVENT_ACTOR_MOVE_TO",
+                  "args": {
+                    "actorId": "c77532bf-ca28-5e20-b40e-f3bab0325584",
+                    "x": {
+                      "type": "number",
+                      "value": 11
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 8
+                    },
+                    "collideWith": [],
+                    "moveType": "vertical"
+                  }
+                },
+                {
+                  "id": "181d751c-4a4f-43c3-89e4-beb80ff3b997",
+                  "command": "EVENT_SOUND_PLAY_EFFECT",
+                  "args": {
+                    "type": "beep",
+                    "pitch": 4,
+                    "duration": 0.12,
+                    "wait": false
+                  }
+                },
+                {
+                  "id": "908b59c6-bdaf-4133-9f26-995ed12912e2",
+                  "command": "EVENT_WAIT",
+                  "args": {
+                    "time": {
+                      "type": "number",
+                      "value": 0.8
+                    }
+                  }
+                },
+                {
+                  "id": "47d42914-d546-4651-b468-7ef611661cc0",
+                  "command": "EVENT_SOUND_PLAY_EFFECT",
+                  "args": {
+                    "type": "beep",
+                    "pitch": 7,
+                    "duration": 0.12,
+                    "wait": false
+                  }
+                },
+                {
+                  "id": "c1eef852-7bc9-4284-b227-1e7468403f1a",
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "17",
+                    "value": {
+                      "type": "number",
+                      "value": 1
+                    }
+                  }
+                },
+                {
+                  "id": "5cd5a6f3-f7a6-42b4-96ca-15eeb6816302",
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "ALIEN:\nA part had burned\nout. I fixed it!",
+                      "YOU:\nThank you!\nLet's go home.",
+                      "Use the computer\nat the front of\nyour ship.",
+                      "Choose Launch\nto leave."
+                    ],
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 5,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 3,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": true,
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "false": []
+      }
+    }
+  ],
   "playerHit1Script": [],
   "playerHit2Script": [],
   "playerHit3Script": [],

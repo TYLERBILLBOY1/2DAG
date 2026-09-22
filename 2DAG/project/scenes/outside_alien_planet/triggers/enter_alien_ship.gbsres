@@ -1,0 +1,82 @@
+{
+  "_resourceType": "trigger",
+  "id": "0dac6be8-ddee-4348-a56d-eaace798dc60",
+  "name": "Enter Alien Ship",
+  "prefabId": "",
+  "x": 17,
+  "y": 85,
+  "symbol": "trigger_2",
+  "prefabScriptOverrides": {},
+  "width": 4,
+  "height": 1,
+  "script": [
+    {
+      "id": "6a1f0df0-efb3-4283-9727-f58ccfa96e0e",
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "0"
+        }
+      },
+      "children": {
+        "true": [],
+        "false": [
+          {
+            "id": "75eb71af-094d-49fa-a6c9-df5bfb7e5a53",
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "0",
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            }
+          },
+          {
+            "id": "f85cfad6-c3fe-4dc4-b4a9-327416c727e3",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "A ship in the\npond! I can reach\nits open hatch.",
+                "Maybe I'll find\nspare parts\ninside."
+              ],
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 5,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 3,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": true,
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "97c6426b-f8d1-46e3-963f-b14a552ba862",
+      "command": "EVENT_SWITCH_SCENE",
+      "args": {
+        "sceneId": "5384848c-0246-4994-8c53-4e407e81fb31",
+        "x": {
+          "type": "number",
+          "value": 41
+        },
+        "y": {
+          "type": "number",
+          "value": 12
+        },
+        "direction": "left",
+        "fadeSpeed": "2"
+      }
+    }
+  ],
+  "leaveScript": [],
+  "_index": 1
+}

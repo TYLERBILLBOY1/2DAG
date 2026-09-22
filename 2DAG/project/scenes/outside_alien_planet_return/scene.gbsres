@@ -1,0 +1,131 @@
+{
+  "_resourceType": "scene",
+  "id": "a2f1630c-8169-59c8-8e8f-9470d178ce49",
+  "_index": 5,
+  "name": "Outside Alien Planet Return",
+  "backgroundId": "22d2633d-a2ed-4e42-86f8-98b05dc5ab5b",
+  "tilesetId": "",
+  "width": 33,
+  "height": 99,
+  "type": "TOPDOWN",
+  "colorModeOverride": "none",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "collisions": "00cc3+",
+  "autoFadeSpeed": 1,
+  "symbol": "scene_6",
+  "x": 1350,
+  "y": 64,
+  "script": [
+    {
+      "id": "dedcc490-0d6e-49ec-af6a-8179c7caf8bb",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl b_resetAlien, _resetAlien\nVM_CALL_NATIVE b_resetAlien, _resetAlien",
+        "references": [],
+        "__label": "Alien Start"
+      }
+    },
+    {
+      "id": "f4b3330f-6ad3-495e-938b-fe59983f911b",
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "872f61cf-bd62-4e58-92ee-a751e7335fe9"
+      }
+    },
+    {
+      "id": "ecad227d-8d63-42b0-9317-4e7f7dbf6bca",
+      "command": "EVENT_ACTOR_GET_POSITION",
+      "args": {
+        "actorId": "player",
+        "vectorX": "40",
+        "vectorY": "41",
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "b0db85a0-963c-4fb9-bb3d-5376acf168cb",
+      "command": "EVENT_ACTOR_SET_POSITION",
+      "args": {
+        "actorId": "2f71d093-891b-5a83-aa14-4e046c5dc3f3",
+        "x": {
+          "type": "variable",
+          "value": "40"
+        },
+        "y": {
+          "type": "variable",
+          "value": "41"
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "83b05b3a-18d0-40d3-8fe9-68afd57d002c",
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "18"
+        }
+      },
+      "children": {
+        "true": [],
+        "false": [
+          {
+            "id": "4f88f4a7-1f94-4ec8-b15a-cb84aaceefa9",
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "18",
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            }
+          },
+          {
+            "id": "a46aab98-8f94-4462-a276-0f0308a19539",
+            "command": "EVENT_CAMERA_SHAKE",
+            "args": {
+              "units": "frames",
+              "frames": 40,
+              "shakeDirection": "diagonal",
+              "magnitude": {
+                "type": "number",
+                "value": 2
+              }
+            }
+          },
+          {
+            "id": "b297bdea-c4b9-4b2b-be01-a09a87b187ba",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "YOU:\nThe paths have\nchanged!",
+                "ALIEN:\nThe ship's power\nmoved the trees.",
+                "ALIEN:\nYour ship is\nto the north.",
+                "Find a new path\nback to it.",
+                "ALIEN:\nI'll follow you."
+              ],
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 5,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 3,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": true,
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": []
+}

@@ -11,17 +11,18 @@
   "height": 1,
   "script": [
     {
+      "id": "a98b2e2e-d5f2-47fe-b5c2-6f0db66606f8",
       "command": "EVENT_IF",
       "args": {
         "condition": {
           "type": "variable",
           "value": "2"
-        },
-        "__collapseElse": true
+        }
       },
       "children": {
         "true": [
           {
+            "id": "ec9f139f-2479-4fc9-96d3-7a3f38e45cb6",
             "command": "EVENT_SWITCH_SCENE",
             "args": {
               "sceneId": "5ff7bfe8-4e1f-4702-92d4-b4c790bc3f2d",
@@ -35,63 +36,35 @@
               },
               "direction": "right",
               "fadeSpeed": "2"
-            },
-            "id": "147d2068-3b65-453a-860d-a8a0b1b91bbf"
+            }
           }
         ],
-        "false": []
-      },
-      "id": "ab9ce2df-02f2-4cf4-816f-db57a49ca547"
-    },
-    {
-      "command": "EVENT_TEXT",
-      "args": {
-        "text": [
-          "The door button\ndoesnt work."
-        ],
-        "__section": "text",
-        "avatarId": "",
-        "minHeight": 4,
-        "maxHeight": 7,
-        "textX": 1,
-        "textY": 1,
-        "textHeight": 5,
-        "position": "bottom",
-        "clearPrevious": true,
-        "showFrame": "true",
-        "speedIn": -1,
-        "speedOut": -1,
-        "closeWhen": "key",
-        "closeButton": "a",
-        "closeDelayTime": 0.5,
-        "closeDelayFrames": 30
-      },
-      "id": "a5266036-7044-41e4-aa0c-30c0a9afd7e9"
-    },
-    {
-      "command": "EVENT_TEXT",
-      "args": {
-        "text": [
-          "I need to turn the\npower on."
-        ],
-        "__section": "text",
-        "avatarId": "",
-        "minHeight": 4,
-        "maxHeight": 7,
-        "textX": 1,
-        "textY": 1,
-        "textHeight": 5,
-        "position": "bottom",
-        "clearPrevious": true,
-        "showFrame": "true",
-        "speedIn": -1,
-        "speedOut": -1,
-        "closeWhen": "key",
-        "closeButton": "a",
-        "closeDelayTime": 0.5,
-        "closeDelayFrames": 30
-      },
-      "id": "e10ef4fe-e57c-4878-9f5a-af6c4101ade0"
+        "false": [
+          {
+            "id": "fd10286c-5183-4d2b-b014-f8216b13e176",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "This door needs\npower to open.",
+                "Go up the ladder.\nUse the computer\nat the top."
+              ],
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 5,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 3,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": true,
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a"
+            }
+          }
+        ]
+      }
     }
   ],
   "leaveScript": [],

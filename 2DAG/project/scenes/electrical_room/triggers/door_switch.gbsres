@@ -1,0 +1,230 @@
+{
+  "_resourceType": "trigger",
+  "id": "1408d6fc-ac3b-5819-8b50-ccb7b73fe2da",
+  "prefabId": "",
+  "prefabScriptOverrides": {},
+  "_index": 4,
+  "name": "Door Switch",
+  "x": 11,
+  "y": 11,
+  "width": 4,
+  "height": 1,
+  "script": [
+    {
+      "id": "7413b38b-904a-443a-a580-1c4eea1015cd",
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "7"
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "id": "995c714a-c529-44f8-8b7d-6d0a94c05f37",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "This switch\nis already on."
+              ],
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 5,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 3,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": true,
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a"
+            }
+          }
+        ],
+        "false": [
+          {
+            "id": "32ace466-d0ae-4a07-950a-28157150451a",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "MIDDLE SWITCH\nDoor lock"
+              ],
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 5,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 3,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": true,
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a"
+            }
+          },
+          {
+            "id": "a1a7a085-a9a2-4cd8-b0df-59cdbc33233b",
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "14"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 2
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "id": "d719523a-4599-40a8-ad57-d84401abbd6c",
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "14",
+                    "value": {
+                      "type": "number",
+                      "value": 3
+                    }
+                  }
+                },
+                {
+                  "id": "ef93c109-00f1-4ee6-b800-64262b99167e",
+                  "command": "EVENT_SOUND_PLAY_EFFECT",
+                  "args": {
+                    "type": "beep",
+                    "pitch": 5,
+                    "duration": 0.12,
+                    "wait": false
+                  }
+                },
+                {
+                  "id": "3c5e80fa-f37f-4f3b-ab68-99cd43832392",
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Door lock is off."
+                    ],
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 5,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 3,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": true,
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a"
+                  }
+                },
+                {
+                  "id": "efe902da-2368-4d00-8d71-a82c93f0408b",
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "7",
+                    "value": {
+                      "type": "number",
+                      "value": 1
+                    }
+                  }
+                },
+                {
+                  "id": "6d13e67f-4f24-49e5-b4d4-bb309612253c",
+                  "command": "EVENT_SOUND_PLAY_EFFECT",
+                  "args": {
+                    "type": "beep",
+                    "pitch": 8,
+                    "duration": 0.12,
+                    "wait": false
+                  }
+                },
+                {
+                  "id": "6f4bff8a-5d9d-4abe-b7bd-b6b5183f1256",
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "You did it!\nThe cryo room\nis unlocked.",
+                      "Leave this room.\nTake the LEFT\ndoor on the ship."
+                    ],
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 5,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 3,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": true,
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a"
+                  }
+                }
+              ],
+              "false": [
+                {
+                  "id": "3157425f-9c47-4b98-b435-a0d66c1d6b1c",
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "14",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  }
+                },
+                {
+                  "id": "5e15a720-f9e7-4d25-a9c6-c85b7c312983",
+                  "command": "EVENT_SOUND_PLAY_EFFECT",
+                  "args": {
+                    "type": "beep",
+                    "pitch": 1,
+                    "duration": 0.12,
+                    "wait": false
+                  }
+                },
+                {
+                  "id": "c85120cc-bef4-499f-9122-33c98cac0ecd",
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Wrong order.\nAll the switches\nhave reset.",
+                      "Try again. Read\nthe clue on the\ncomputer above."
+                    ],
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 5,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 3,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": true,
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "leaveScript": [],
+  "symbol": "trigger_24"
+}

@@ -1,0 +1,694 @@
+{
+  "_resourceType": "trigger",
+  "id": "d1fae44e-a7e5-42d6-9774-1f6713deeca5",
+  "name": "Cryo Pod Controls",
+  "prefabId": "",
+  "x": 12,
+  "y": 4,
+  "symbol": "trigger_17",
+  "prefabScriptOverrides": {},
+  "width": 2,
+  "height": 1,
+  "script": [
+    {
+      "id": "b520016b-7882-4877-8197-de61545a16e0",
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "1"
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "id": "6cb53dd1-a85b-4256-acd3-170e2e13bd6e",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Pod 1 is empty.\nHe is safe now.",
+                "No one else\nsurvived."
+              ],
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 5,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 3,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": true,
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a"
+            }
+          }
+        ],
+        "false": [
+          {
+            "id": "bddeaa2f-d595-4d6f-ad83-4bb203a393dc",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "CRYO COMPUTER\nOne crew member\nis still alive."
+              ],
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 5,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 3,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": true,
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a"
+            }
+          },
+          {
+            "id": "43f01848-f5a6-4d08-aab1-eb65e2c792ef",
+            "command": "EVENT_MENU",
+            "args": {
+              "variable": "6",
+              "items": 3,
+              "option1": "Check pods",
+              "option2": "Thaw a pod",
+              "option3": "Leave",
+              "cancelOnB": true,
+              "cancelOnLastOption": false,
+              "layout": "dialogue"
+            }
+          },
+          {
+            "id": "2b549db3-ee3c-4b19-91da-18abc7e250a9",
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "6"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 1
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "id": "9a1b4737-bd6e-4ecf-8c53-42c62df92a9c",
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "POD 1: ALIVE\nPODS 2-8: DEAD",
+                      "Pod 1 is at the\ntop left of\nthe room.",
+                      "To save him:\nPick Thaw a pod.",
+                      "Then choose\nPod 1."
+                    ],
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 5,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 3,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": true,
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a"
+                  }
+                }
+              ],
+              "false": []
+            }
+          },
+          {
+            "id": "cac9c41c-67d6-4a75-ac67-e5119cf9162d",
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "6"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 2
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "id": "78902987-0d3e-42b6-9513-183448d535ed",
+                  "command": "EVENT_MENU",
+                  "args": {
+                    "variable": "20",
+                    "items": 8,
+                    "option1": "Pod 1",
+                    "option2": "Pod 2",
+                    "option3": "Pod 3",
+                    "option4": "Pod 4",
+                    "option5": "Pod 5",
+                    "option6": "Pod 6",
+                    "option7": "Pod 7",
+                    "option8": "Pod 8",
+                    "cancelOnB": true,
+                    "cancelOnLastOption": false,
+                    "layout": "dialogue"
+                  }
+                },
+                {
+                  "id": "6e5d27c4-6e04-4919-a2a8-7b926ac9a82a",
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "eq",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "20"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 1
+                      }
+                    }
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "id": "adef2f6e-d316-45ef-9877-1936df949154",
+                        "command": "EVENT_MENU",
+                        "args": {
+                          "variable": "21",
+                          "items": 4,
+                          "option1": "Warm pod",
+                          "option2": "Drain pod",
+                          "option3": "Open pod",
+                          "option4": "Back",
+                          "cancelOnB": true,
+                          "cancelOnLastOption": false,
+                          "layout": "dialogue"
+                        }
+                      },
+                      {
+                        "id": "7c6bc41e-82cc-4777-9ac0-41cffa4037f7",
+                        "command": "EVENT_IF",
+                        "args": {
+                          "condition": {
+                            "type": "eq",
+                            "valueA": {
+                              "type": "variable",
+                              "value": "21"
+                            },
+                            "valueB": {
+                              "type": "number",
+                              "value": 1
+                            }
+                          }
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "id": "38ba7f89-1bdc-47f9-9f85-7a23516bf3f4",
+                              "command": "EVENT_IF",
+                              "args": {
+                                "condition": {
+                                  "type": "variable",
+                                  "value": "15"
+                                }
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "id": "71516774-ca23-469d-9030-41a34112814a",
+                                    "command": "EVENT_TEXT",
+                                    "args": {
+                                      "text": [
+                                        "The pod is warm.\nDrain it next."
+                                      ],
+                                      "avatarId": "",
+                                      "minHeight": 4,
+                                      "maxHeight": 5,
+                                      "textX": 1,
+                                      "textY": 1,
+                                      "textHeight": 3,
+                                      "position": "bottom",
+                                      "clearPrevious": true,
+                                      "showFrame": true,
+                                      "speedIn": -1,
+                                      "speedOut": -1,
+                                      "closeWhen": "key",
+                                      "closeButton": "a"
+                                    }
+                                  }
+                                ],
+                                "false": [
+                                  {
+                                    "id": "dc3953a2-1e84-43f6-beb3-2646af3aeca0",
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "15",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 1
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "id": "6c0a4580-35eb-4509-9c4a-f277c49b85ee",
+                                    "command": "EVENT_SOUND_PLAY_EFFECT",
+                                    "args": {
+                                      "type": "beep",
+                                      "pitch": 5,
+                                      "duration": 0.12,
+                                      "wait": false
+                                    }
+                                  },
+                                  {
+                                    "id": "f819316b-7022-4b18-9e42-9ce023bfc8b9",
+                                    "command": "EVENT_TEXT",
+                                    "args": {
+                                      "text": [
+                                        "The pod is warm.\nNow choose\nDrain pod."
+                                      ],
+                                      "avatarId": "",
+                                      "minHeight": 4,
+                                      "maxHeight": 5,
+                                      "textX": 1,
+                                      "textY": 1,
+                                      "textHeight": 3,
+                                      "position": "bottom",
+                                      "clearPrevious": true,
+                                      "showFrame": true,
+                                      "speedIn": -1,
+                                      "speedOut": -1,
+                                      "closeWhen": "key",
+                                      "closeButton": "a"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "false": []
+                        }
+                      },
+                      {
+                        "id": "a685fad2-b197-4471-8fbb-79c31876e938",
+                        "command": "EVENT_IF",
+                        "args": {
+                          "condition": {
+                            "type": "eq",
+                            "valueA": {
+                              "type": "variable",
+                              "value": "21"
+                            },
+                            "valueB": {
+                              "type": "number",
+                              "value": 2
+                            }
+                          }
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "id": "4eb71691-f5bf-402f-be6b-088ad0adc0ea",
+                              "command": "EVENT_IF",
+                              "args": {
+                                "condition": {
+                                  "type": "variable",
+                                  "value": "15"
+                                }
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "id": "60dd6775-3858-4334-b21f-5ab71f10335c",
+                                    "command": "EVENT_IF",
+                                    "args": {
+                                      "condition": {
+                                        "type": "variable",
+                                        "value": "16"
+                                      }
+                                    },
+                                    "children": {
+                                      "true": [
+                                        {
+                                          "id": "0bab30e7-c631-4ba5-8c3b-c770d6d128d6",
+                                          "command": "EVENT_TEXT",
+                                          "args": {
+                                            "text": [
+                                              "The pod is empty.\nChoose Open pod\nto let him out."
+                                            ],
+                                            "avatarId": "",
+                                            "minHeight": 4,
+                                            "maxHeight": 5,
+                                            "textX": 1,
+                                            "textY": 1,
+                                            "textHeight": 3,
+                                            "position": "bottom",
+                                            "clearPrevious": true,
+                                            "showFrame": true,
+                                            "speedIn": -1,
+                                            "speedOut": -1,
+                                            "closeWhen": "key",
+                                            "closeButton": "a"
+                                          }
+                                        }
+                                      ],
+                                      "false": [
+                                        {
+                                          "id": "83aba1d2-a8ac-4133-9df5-d90c3a8c6626",
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "16",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 1
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "id": "582cf55b-06f0-48ea-821e-c9d0e1e0b1d0",
+                                          "command": "EVENT_SOUND_PLAY_EFFECT",
+                                          "args": {
+                                            "type": "beep",
+                                            "pitch": 5,
+                                            "duration": 0.12,
+                                            "wait": false
+                                          }
+                                        },
+                                        {
+                                          "id": "8f32ba27-5aa2-49e6-b7f7-aa033281638c",
+                                          "command": "EVENT_TEXT",
+                                          "args": {
+                                            "text": [
+                                              "The liquid is\ndrained. Choose\nOpen pod next."
+                                            ],
+                                            "avatarId": "",
+                                            "minHeight": 4,
+                                            "maxHeight": 5,
+                                            "textX": 1,
+                                            "textY": 1,
+                                            "textHeight": 3,
+                                            "position": "bottom",
+                                            "clearPrevious": true,
+                                            "showFrame": true,
+                                            "speedIn": -1,
+                                            "speedOut": -1,
+                                            "closeWhen": "key",
+                                            "closeButton": "a"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ],
+                                "false": [
+                                  {
+                                    "id": "3ccf1eb5-7a36-49cc-a4e5-7b20d6e7f3ab",
+                                    "command": "EVENT_TEXT",
+                                    "args": {
+                                      "text": [
+                                        "Warm the pod\nbefore you\ndrain it."
+                                      ],
+                                      "avatarId": "",
+                                      "minHeight": 4,
+                                      "maxHeight": 5,
+                                      "textX": 1,
+                                      "textY": 1,
+                                      "textHeight": 3,
+                                      "position": "bottom",
+                                      "clearPrevious": true,
+                                      "showFrame": true,
+                                      "speedIn": -1,
+                                      "speedOut": -1,
+                                      "closeWhen": "key",
+                                      "closeButton": "a"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "false": []
+                        }
+                      },
+                      {
+                        "id": "dbc8ce95-344a-4a82-81a6-556cf938e30f",
+                        "command": "EVENT_IF",
+                        "args": {
+                          "condition": {
+                            "type": "eq",
+                            "valueA": {
+                              "type": "variable",
+                              "value": "21"
+                            },
+                            "valueB": {
+                              "type": "number",
+                              "value": 3
+                            }
+                          }
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "id": "22f7b8b2-7479-4ca4-a0fa-72c391aed115",
+                              "command": "EVENT_IF",
+                              "args": {
+                                "condition": {
+                                  "type": "variable",
+                                  "value": "16"
+                                }
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "id": "813a263b-6d0a-455b-8122-08455d8dc8b0",
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "1",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 1
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "id": "08aee9f4-4970-4d3c-b19c-55dc004440be",
+                                    "command": "EVENT_GBVM_SCRIPT",
+                                    "args": {
+                                      "script": ".globl b_resetAlien, _resetAlien\nVM_CALL_NATIVE b_resetAlien, _resetAlien",
+                                      "references": [],
+                                      "__label": "Alien Start"
+                                    }
+                                  },
+                                  {
+                                    "id": "affb215a-8f1f-4628-a0b9-c0f21c100090",
+                                    "command": "EVENT_SOUND_PLAY_EFFECT",
+                                    "args": {
+                                      "type": "beep",
+                                      "pitch": 7,
+                                      "duration": 0.12,
+                                      "wait": false
+                                    }
+                                  },
+                                  {
+                                    "id": "7f3845f8-c9f6-47aa-a74b-feca77bbd077",
+                                    "command": "EVENT_ACTOR_HIDE",
+                                    "args": {
+                                      "actorId": "639757ea-73a2-4eaa-a558-13294f9f52c2"
+                                    }
+                                  },
+                                  {
+                                    "id": "acbfbb09-5dd3-405b-af09-97e44103f15c",
+                                    "command": "EVENT_ACTOR_HIDE",
+                                    "args": {
+                                      "actorId": "87656a8b-97c0-4c63-a2d3-27537280da9f"
+                                    }
+                                  },
+                                  {
+                                    "id": "897681f0-cab9-4743-9de3-4c9cf23dce14",
+                                    "command": "EVENT_ACTOR_HIDE",
+                                    "args": {
+                                      "actorId": "eb6d5935-be28-48f4-819d-1d13811c3fdb"
+                                    }
+                                  },
+                                  {
+                                    "id": "ce5c0775-acd3-407f-b580-1b78335d0315",
+                                    "command": "EVENT_ACTOR_HIDE",
+                                    "args": {
+                                      "actorId": "5e661f23-b716-44c4-b0a2-bb0e6d1c2f72"
+                                    }
+                                  },
+                                  {
+                                    "id": "e603148b-0eee-41a6-a0a1-a0cb06940552",
+                                    "command": "EVENT_ACTOR_SET_POSITION",
+                                    "args": {
+                                      "actorId": "d306bada-0def-58ca-95b8-444b8bb34f0b",
+                                      "x": {
+                                        "type": "number",
+                                        "value": 4
+                                      },
+                                      "y": {
+                                        "type": "number",
+                                        "value": 7
+                                      },
+                                      "units": "tiles"
+                                    }
+                                  },
+                                  {
+                                    "id": "83dd79bf-6f2f-4852-be22-7f8e608a153a",
+                                    "command": "EVENT_ACTOR_SHOW",
+                                    "args": {
+                                      "actorId": "d306bada-0def-58ca-95b8-444b8bb34f0b"
+                                    }
+                                  },
+                                  {
+                                    "id": "8ee5784b-9f92-4d2e-bf10-863df0ad49be",
+                                    "command": "EVENT_TEXT",
+                                    "args": {
+                                      "text": [
+                                        "POD 1 IS OPEN\nHe is safe now!"
+                                      ],
+                                      "avatarId": "",
+                                      "minHeight": 4,
+                                      "maxHeight": 5,
+                                      "textX": 1,
+                                      "textY": 1,
+                                      "textHeight": 3,
+                                      "position": "bottom",
+                                      "clearPrevious": true,
+                                      "showFrame": true,
+                                      "speedIn": -1,
+                                      "speedOut": -1,
+                                      "closeWhen": "key",
+                                      "closeButton": "a"
+                                    }
+                                  },
+                                  {
+                                    "id": "b6e3097d-867a-482e-9475-50d3ce36b6ce",
+                                    "command": "EVENT_TEXT",
+                                    "args": {
+                                      "text": [
+                                        "ALIEN:\nYou saved me.\nThank you!",
+                                        "YOU:\nMy ship broke.\nCan you fix it?",
+                                        "ALIEN:\nYes! I used to\nrepair this ship.",
+                                        "ALIEN:\nLead me to yours.\nI'll follow you."
+                                      ],
+                                      "avatarId": "",
+                                      "minHeight": 4,
+                                      "maxHeight": 5,
+                                      "textX": 1,
+                                      "textY": 1,
+                                      "textHeight": 3,
+                                      "position": "bottom",
+                                      "clearPrevious": true,
+                                      "showFrame": true,
+                                      "speedIn": -1,
+                                      "speedOut": -1,
+                                      "closeWhen": "key",
+                                      "closeButton": "a"
+                                    }
+                                  }
+                                ],
+                                "false": [
+                                  {
+                                    "id": "14a924cd-56be-4c36-b98e-d28cf9aff2b4",
+                                    "command": "EVENT_TEXT",
+                                    "args": {
+                                      "text": [
+                                        "The pod is not\nready to open.",
+                                        "Warm it first.\nThen drain it.\nThen open it."
+                                      ],
+                                      "avatarId": "",
+                                      "minHeight": 4,
+                                      "maxHeight": 5,
+                                      "textX": 1,
+                                      "textY": 1,
+                                      "textHeight": 3,
+                                      "position": "bottom",
+                                      "clearPrevious": true,
+                                      "showFrame": true,
+                                      "speedIn": -1,
+                                      "speedOut": -1,
+                                      "closeWhen": "key",
+                                      "closeButton": "a"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "false": []
+                        }
+                      }
+                    ],
+                    "false": [
+                      {
+                        "id": "0285e157-56b0-42ed-b61a-54035c60077f",
+                        "command": "EVENT_IF",
+                        "args": {
+                          "condition": {
+                            "type": "gt",
+                            "valueA": {
+                              "type": "variable",
+                              "value": "20"
+                            },
+                            "valueB": {
+                              "type": "number",
+                              "value": 1
+                            }
+                          }
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "id": "9c65d509-05f0-458c-802a-17e3c1eb82fb",
+                              "command": "EVENT_TEXT",
+                              "args": {
+                                "text": [
+                                  "This crew member\nhas died. Choose\na different pod."
+                                ],
+                                "avatarId": "",
+                                "minHeight": 4,
+                                "maxHeight": 5,
+                                "textX": 1,
+                                "textY": 1,
+                                "textHeight": 3,
+                                "position": "bottom",
+                                "clearPrevious": true,
+                                "showFrame": true,
+                                "speedIn": -1,
+                                "speedOut": -1,
+                                "closeWhen": "key",
+                                "closeButton": "a"
+                              }
+                            }
+                          ],
+                          "false": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ],
+              "false": []
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "leaveScript": [],
+  "_index": 9
+}

@@ -1,0 +1,33 @@
+{
+  "_resourceType": "trigger",
+  "id": "c669ab7b-1270-5c1c-83d9-1961a3c45f57",
+  "prefabId": "",
+  "prefabScriptOverrides": {},
+  "_index": 0,
+  "name": "Enter Your Ship",
+  "x": 16,
+  "y": 1,
+  "width": 2,
+  "height": 1,
+  "script": [
+    {
+      "id": "bab9bc22-bfcb-49b2-91d2-f9e1ea6c7e9d",
+      "command": "EVENT_SWITCH_SCENE",
+      "args": {
+        "sceneId": "398158d8-7dab-4cce-98fa-7edf08b2566a",
+        "x": {
+          "type": "number",
+          "value": 9
+        },
+        "y": {
+          "type": "number",
+          "value": 12
+        },
+        "direction": "up",
+        "fadeSpeed": "2"
+      }
+    }
+  ],
+  "leaveScript": [],
+  "symbol": "trigger_27"
+}

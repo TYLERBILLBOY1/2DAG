@@ -1,0 +1,155 @@
+{
+  "_resourceType": "sprite",
+  "id": "fd8d5e57-81cb-58f0-8190-b9491005af9a",
+  "name": "Alien",
+  "symbol": "sprite_alien",
+  "states": [
+    {
+      "id": "397ebd5a-da61-4093-9995-fb25f1f22eea",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": false,
+      "animations": [
+        {
+          "id": "e8350ab7-e8a5-47d0-8db3-b8b79b1053f2",
+          "frames": [
+            {
+              "id": "9b8a2730-b15c-4daf-943d-47dc44308ceb",
+              "tiles": [
+                {
+                  "id": "429a9ceb-7988-40d3-a35e-c53e0c73d896",
+                  "x": 0,
+                  "y": 16,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "979fd8c6-f36b-42b5-b9e4-8c5f777a07ca",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 16,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "a9e72ff5-6fcb-497e-b004-cc5d2bc7a213",
+                  "x": 8,
+                  "y": 16,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "0d6adf98-02fe-4f7a-9e63-81ace3981ff1",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 16,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "307a22d2-25b7-458c-9615-3e484bcf60b3",
+          "frames": [
+            {
+              "id": "9481edd8-e60a-4666-904b-db7dc969a293",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "e21b2829-5b2d-47f9-89e5-f8141edf95b3",
+          "frames": [
+            {
+              "id": "91dd27d9-07e6-4073-8c12-7c6053ab5d56",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "2c487990-6bcb-47c1-8e3b-f2914c922f32",
+          "frames": [
+            {
+              "id": "b9eb049d-6a8a-4a4f-ae01-b7b2248ec6a4",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "caef48ad-1cb0-41f5-9951-ac8c060eb9f9",
+          "frames": [
+            {
+              "id": "ebf908d5-bea6-46da-825a-6403879f394d",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "4576d789-d91d-4034-8496-7d2b1757d4f2",
+          "frames": [
+            {
+              "id": "5b71883a-5a49-40ea-8ba7-491f71b8680e",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "9a2e1677-be43-47a4-a4de-9477c2ecfd8a",
+          "frames": [
+            {
+              "id": "2437f2e7-fa55-4696-832c-55af449d92c1",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "dd5d94b8-641b-4eb2-a42d-5d9c421865d0",
+          "frames": [
+            {
+              "id": "8e8aa1e8-43f5-4903-821e-cac1a861181b",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 4,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 16,
+  "canvasHeight": 32,
+  "boundsX": 2,
+  "boundsY": 0,
+  "boundsWidth": 12,
+  "boundsHeight": 8,
+  "animSpeed": 15,
+  "filename": "Alien.png",
+  "checksum": "",
+  "width": 16,
+  "height": 32
+}

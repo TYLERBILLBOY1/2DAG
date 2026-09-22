@@ -1,0 +1,130 @@
+{
+  "_resourceType": "actor",
+  "id": "d306bada-0def-58ca-95b8-444b8bb34f0b",
+  "name": "Alien",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "fd8d5e57-81cb-58f0-8190-b9491005af9a",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": true,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "symbol": "actor_5",
+  "script": [
+    {
+      "id": "930344db-f706-4595-a829-f55581b40745",
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "1"
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "id": "cc1145ce-4876-4da7-bebe-7fb35f8ee53f",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "ALIEN:\nLead me to your\nship. I can help."
+              ],
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 5,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 3,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": true,
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a"
+            }
+          }
+        ],
+        "false": []
+      }
+    }
+  ],
+  "startScript": [
+    {
+      "id": "61b07b54-1927-417b-99cf-3dab9651a40a",
+      "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+      "args": {
+        "actorId": "$self$"
+      }
+    },
+    {
+      "id": "522f5db6-a1d7-4708-a617-09bda5a08648",
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "1"
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "id": "7bdf36ea-1e50-49fc-b042-51e3c67f9f69",
+            "command": "EVENT_ACTOR_SHOW",
+            "args": {
+              "actorId": "$self$"
+            }
+          }
+        ],
+        "false": [
+          {
+            "id": "73c9a7eb-3020-4da8-8360-72585cb2d322",
+            "command": "EVENT_ACTOR_HIDE",
+            "args": {
+              "actorId": "$self$"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "updateScript": [
+    {
+      "id": "52a5edbd-a9f0-4e5c-9f9a-1473fd68bc33",
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "1"
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "id": "3467fbf9-8cde-4ebf-b055-2def9dc8d763",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl b_followAlien, _followAlien\nVM_CALL_NATIVE b_followAlien, _followAlien",
+              "references": [],
+              "__label": "Alien Follow"
+            }
+          }
+        ],
+        "false": []
+      }
+    }
+  ],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "coordinateType": "tiles",
+  "x": 4,
+  "y": 7,
+  "_index": 4
+}

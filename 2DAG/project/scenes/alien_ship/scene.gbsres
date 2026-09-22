@@ -16,7 +16,55 @@
   "symbol": "scene_3",
   "x": 168,
   "y": 288,
-  "script": [],
+  "script": [
+    {
+      "id": "715fa29f-832e-48eb-848e-cf8cc712fcd9",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl b_resetAlien, _resetAlien\nVM_CALL_NATIVE b_resetAlien, _resetAlien",
+        "references": [],
+        "__label": "Alien Start"
+      }
+    },
+    {
+      "id": "f1dc4dd9-e9e0-4337-b980-7d6587270ff5",
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "872f61cf-bd62-4e58-92ee-a751e7335fe9"
+      }
+    },
+    {
+      "id": "c577cd35-eda3-4a72-8f99-1d6201762369",
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "1"
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "id": "29f42e92-180d-479e-b298-f5966f8e295f",
+            "command": "EVENT_ACTOR_SET_POSITION",
+            "args": {
+              "actorId": "4b6af47b-9eb5-530c-acc1-611ded99479f",
+              "x": {
+                "type": "number",
+                "value": 41
+              },
+              "y": {
+                "type": "number",
+                "value": 12
+              },
+              "units": "tiles"
+            }
+          }
+        ],
+        "false": []
+      }
+    }
+  ],
   "playerHit1Script": [],
   "playerHit2Script": [],
   "playerHit3Script": []

@@ -1,0 +1,186 @@
+{
+  "_resourceType": "trigger",
+  "id": "58f8ad5a-0251-54c5-b029-b1826b5af92c",
+  "prefabId": "",
+  "prefabScriptOverrides": {},
+  "_index": 2,
+  "name": "Cooling Switch",
+  "x": 17,
+  "y": 11,
+  "width": 4,
+  "height": 1,
+  "script": [
+    {
+      "id": "2cd3e570-689f-4269-9a89-fe9adf610b25",
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "7"
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "id": "9c542892-dfd2-40e6-94c2-0f0b54d46b5d",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "This switch\nis already on."
+              ],
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 5,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 3,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": true,
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a"
+            }
+          }
+        ],
+        "false": [
+          {
+            "id": "0e2f3440-2e83-4acc-88e8-85dfe3691189",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "RIGHT SWITCH\nCooling"
+              ],
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 5,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 3,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": true,
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a"
+            }
+          },
+          {
+            "id": "8f55ab04-1d73-407e-baf6-5490b3b4501a",
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "14"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "id": "c2c1bcfd-8538-44ff-9cd9-999a2b6a9b0c",
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "14",
+                    "value": {
+                      "type": "number",
+                      "value": 1
+                    }
+                  }
+                },
+                {
+                  "id": "ce8b5319-38d1-4410-931e-15d11cb96015",
+                  "command": "EVENT_SOUND_PLAY_EFFECT",
+                  "args": {
+                    "type": "beep",
+                    "pitch": 5,
+                    "duration": 0.12,
+                    "wait": false
+                  }
+                },
+                {
+                  "id": "74848c3c-a8ad-43c7-8f6b-9949abc35d48",
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Cooling is on.\nOne switch done."
+                    ],
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 5,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 3,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": true,
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a"
+                  }
+                }
+              ],
+              "false": [
+                {
+                  "id": "853f5c6d-46d7-427e-8af4-0864a520001b",
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "14",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  }
+                },
+                {
+                  "id": "75ed2505-b77a-472e-a1d8-0e62d5a5db04",
+                  "command": "EVENT_SOUND_PLAY_EFFECT",
+                  "args": {
+                    "type": "beep",
+                    "pitch": 1,
+                    "duration": 0.12,
+                    "wait": false
+                  }
+                },
+                {
+                  "id": "7a5a9de3-7a3d-4ac1-b270-230caa759afa",
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Wrong order.\nAll the switches\nhave reset.",
+                      "Try again. Read\nthe clue on the\ncomputer above."
+                    ],
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 5,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 3,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": true,
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "leaveScript": [],
+  "symbol": "trigger_23"
+}

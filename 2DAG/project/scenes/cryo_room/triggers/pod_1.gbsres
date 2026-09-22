@@ -1,32 +1,32 @@
 {
   "_resourceType": "trigger",
-  "id": "4b2fae39-e93c-41ac-a394-15cf926bce6a",
-  "name": "Left Engine Computer",
+  "id": "5f59709b-b451-4570-b218-4398d692a53c",
+  "name": "Pod 1",
   "prefabId": "",
-  "x": 5,
-  "y": 2,
-  "symbol": "trigger_20",
+  "x": 4,
+  "y": 6,
+  "symbol": "trigger_9",
   "prefabScriptOverrides": {},
   "width": 2,
   "height": 1,
   "script": [
     {
-      "id": "d9934405-2c5a-4808-a4db-db16016b7cd4",
+      "id": "0b223fee-9664-422c-95f7-4ef28d427cc4",
       "command": "EVENT_IF",
       "args": {
         "condition": {
           "type": "variable",
-          "value": "17"
+          "value": "1"
         }
       },
       "children": {
         "true": [
           {
-            "id": "a984edea-9460-4a2c-914f-d4c4d1f927ac",
+            "id": "ae4c1a32-e552-4aeb-9291-def5359440be",
             "command": "EVENT_TEXT",
             "args": {
               "text": [
-                "The engine works!\nReady to leave."
+                "POD 1: EMPTY\nThe alien is out."
               ],
               "avatarId": "",
               "minHeight": 4,
@@ -46,11 +46,13 @@
         ],
         "false": [
           {
-            "id": "2ecaf0fb-4574-433b-9846-517db00a41c4",
+            "id": "61385cd5-3a92-4eee-8878-97a15354e4f2",
             "command": "EVENT_TEXT",
             "args": {
               "text": [
-                "The engine is\nbroken. I need\nhelp to fix it."
+                "POD 1: ALIVE\nThis is the one\nI can save!",
+                "Use the computer\nat the top of\nthe room.",
+                "1. Warm the pod.\n2. Drain the pod.\n3. Open the pod."
               ],
               "avatarId": "",
               "minHeight": 4,
@@ -72,5 +74,5 @@
     }
   ],
   "leaveScript": [],
-  "_index": 2
+  "_index": 1
 }

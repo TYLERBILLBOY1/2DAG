@@ -67,6 +67,86 @@
       "symbol": "var_pushediceblock"
     },
     {
+      "id": "13",
+      "name": "introDone",
+      "symbol": "var_introdone"
+    },
+    {
+      "id": "14",
+      "name": "switchOrder",
+      "symbol": "var_switchorder"
+    },
+    {
+      "id": "15",
+      "name": "podWarm",
+      "symbol": "var_podwarm"
+    },
+    {
+      "id": "16",
+      "name": "podEmpty",
+      "symbol": "var_podempty"
+    },
+    {
+      "id": "17",
+      "name": "shipFixed",
+      "symbol": "var_shipfixed"
+    },
+    {
+      "id": "18",
+      "name": "returnTalk",
+      "symbol": "var_returntalk"
+    },
+    {
+      "id": "19",
+      "name": "cryoTalk",
+      "symbol": "var_cryotalk"
+    },
+    {
+      "id": "20",
+      "name": "pickPod",
+      "symbol": "var_pickpod"
+    },
+    {
+      "id": "21",
+      "name": "pickButton",
+      "symbol": "var_pickbutton"
+    },
+    {
+      "id": "22",
+      "name": "mazeTalk",
+      "symbol": "var_mazetalk"
+    },
+    {
+      "id": "23",
+      "name": "switchTalk",
+      "symbol": "var_switchtalk"
+    },
+    {
+      "id": "24",
+      "name": "gameDone",
+      "symbol": "var_gamedone"
+    },
+    {
+      "id": "25",
+      "name": "foundWreck",
+      "symbol": "var_foundwreck"
+    },
+    {
+      "id": "26",
+      "name": "returnHint",
+      "symbol": "var_returnhint"
+    },
+    {
+      "id": "40",
+      "name": "playerX",
+      "symbol": "var_playerx"
+    },
+    {
+      "id": "41",
+      "name": "playerY",
+      "symbol": "var_playery"
+    },
+    {
       "id": "512f8c87-fad6-4bab-8eb3-32f2a1f3ad6c__L0",
       "name": "adad",
       "symbol": "var_adad"

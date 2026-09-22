@@ -1,0 +1,59 @@
+{
+  "_resourceType": "actor",
+  "id": "5e661f23-b716-44c4-b0a2-bb0e6d1c2f72",
+  "name": "AlienTop",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "1626311d-353d-4a5c-a2dd-67cac6468baa",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "symbol": "actor_3",
+  "script": [],
+  "startScript": [
+    {
+      "id": "25e20d02-404f-40af-886d-505a2a454625",
+      "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+      "args": {
+        "actorId": "$self$"
+      }
+    },
+    {
+      "id": "bf7c8010-a3c1-41ef-82fd-0842152823e5",
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "1"
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "id": "8d7913a3-9698-4da1-b9ef-bcfa9079d5e9",
+            "command": "EVENT_ACTOR_HIDE",
+            "args": {
+              "actorId": "$self$"
+            }
+          }
+        ],
+        "false": []
+      }
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "coordinateType": "tiles",
+  "x": 4,
+  "y": 3,
+  "_index": 3
+}

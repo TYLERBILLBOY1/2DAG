@@ -1,0 +1,59 @@
+{
+  "_resourceType": "actor",
+  "id": "87656a8b-97c0-4c63-a2d3-27537280da9f",
+  "name": "CryoJuice2",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "c1d6b44a-af3d-47b6-9a4d-e84af305436e",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "symbol": "actor_1",
+  "script": [],
+  "startScript": [
+    {
+      "id": "00efe8ab-d196-4381-b0bc-1843f61896d9",
+      "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+      "args": {
+        "actorId": "$self$"
+      }
+    },
+    {
+      "id": "14098264-b78f-4afc-8ce5-1a38e71ffbbe",
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "1"
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "id": "df1b3554-7b5f-40c8-b5f5-5269cc9bd210",
+            "command": "EVENT_ACTOR_HIDE",
+            "args": {
+              "actorId": "$self$"
+            }
+          }
+        ],
+        "false": []
+      }
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "coordinateType": "tiles",
+  "x": 4,
+  "y": 3,
+  "_index": 1
+}

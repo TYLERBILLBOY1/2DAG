@@ -1,0 +1,38 @@
+{
+  "_resourceType": "trigger",
+  "id": "c0d65952-a648-477b-8b45-666af09a56fc",
+  "name": "Pod 2",
+  "prefabId": "",
+  "x": 8,
+  "y": 6,
+  "symbol": "trigger_10",
+  "prefabScriptOverrides": {},
+  "width": 2,
+  "height": 1,
+  "script": [
+    {
+      "id": "2cccf3ea-e421-4623-9109-c479c4e2e6d8",
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "POD 2: DEAD\nThis crew member\ndid not survive."
+        ],
+        "avatarId": "",
+        "minHeight": 4,
+        "maxHeight": 5,
+        "textX": 1,
+        "textY": 1,
+        "textHeight": 3,
+        "position": "bottom",
+        "clearPrevious": true,
+        "showFrame": true,
+        "speedIn": -1,
+        "speedOut": -1,
+        "closeWhen": "key",
+        "closeButton": "a"
+      }
+    }
+  ],
+  "leaveScript": [],
+  "_index": 2
+}
