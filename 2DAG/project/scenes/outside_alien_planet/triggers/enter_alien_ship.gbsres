@@ -3,7 +3,7 @@
   "id": "0dac6be8-ddee-4348-a56d-eaace798dc60",
   "name": "Enter Alien Ship",
   "prefabId": "",
-  "x": 17,
+  "x": 16,
   "y": 85,
   "symbol": "trigger_2",
   "prefabScriptOverrides": {},

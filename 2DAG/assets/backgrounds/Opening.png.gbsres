@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "8e28daaf-9d75-49c3-a654-7d963b0bc97a",
+  "name": "Opening",
+  "symbol": "bg_opening",
+  "tileColors": "",
+  "filename": "Opening.png",
+  "width": 20,
+  "height": 18,
+  "imageWidth": 160,
+  "imageHeight": 144
+}

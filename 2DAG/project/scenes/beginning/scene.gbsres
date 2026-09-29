@@ -2,8 +2,8 @@
   "_resourceType": "scene",
   "id": "6a080926-6564-4884-a629-b95bf33c1fa8",
   "_index": 7,
-  "name": "Ending",
-  "backgroundId": "70e2d37e-14f6-5996-8ad1-38b1980f4232",
+  "name": "Beginning",
+  "backgroundId": "8e28daaf-9d75-49c3-a654-7d963b0bc97a",
   "tilesetId": "",
   "width": 20,
   "height": 18,
@@ -53,33 +53,11 @@
       }
     },
     {
-      "id": "1c943200-4864-4ce6-a980-5eb69f791618",
-      "command": "EVENT_TEXT",
-      "args": {
-        "text": [
-          "The engines\nstart up!"
-        ],
-        "avatarId": "",
-        "minHeight": 4,
-        "maxHeight": 5,
-        "textX": 1,
-        "textY": 1,
-        "textHeight": 3,
-        "position": "bottom",
-        "clearPrevious": true,
-        "showFrame": true,
-        "speedIn": -1,
-        "speedOut": -1,
-        "closeWhen": "key",
-        "closeButton": "a"
-      }
-    },
-    {
       "id": "f8f2aefb-f650-4289-a210-cb2bf08a5943",
       "command": "EVENT_CAMERA_SHAKE",
       "args": {
         "units": "frames",
-        "frames": 40,
+        "frames": 400,
         "shakeDirection": "diagonal",
         "magnitude": {
           "type": "number",
@@ -88,40 +66,21 @@
       }
     },
     {
-      "id": "b04d9bcf-c12c-46e6-b1d0-9f1ef0d745f8",
-      "command": "EVENT_TEXT",
+      "command": "EVENT_SWITCH_SCENE",
       "args": {
-        "text": [
-          "You leave the\nplanet with your\nnew friend.",
-          "youre going home.",
-          "THE END",
-          "Thanks for\nplaying!"
-        ],
-        "avatarId": "",
-        "minHeight": 4,
-        "maxHeight": 5,
-        "textX": 1,
-        "textY": 1,
-        "textHeight": 3,
-        "position": "bottom",
-        "clearPrevious": true,
-        "showFrame": true,
-        "speedIn": -1,
-        "speedOut": -1,
-        "closeWhen": "key",
-        "closeButton": "a"
-      }
-    },
-    {
-      "id": "22a82daa-5dc0-4739-82c7-08f6c019485f",
-      "command": "EVENT_SET_VALUE",
-      "args": {
-        "variable": "24",
-        "value": {
+        "sceneId": "398158d8-7dab-4cce-98fa-7edf08b2566a",
+        "x": {
           "type": "number",
-          "value": 1
-        }
-      }
+          "value": 9
+        },
+        "y": {
+          "type": "number",
+          "value": 4
+        },
+        "direction": "down",
+        "fadeSpeed": "2"
+      },
+      "id": "3b7d376f-ea27-41e8-a628-cda85e85d074"
     }
   ],
   "playerHit1Script": [],

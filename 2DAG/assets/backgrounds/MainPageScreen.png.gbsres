@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "9a2e5143-c04a-4526-ad03-fd6d688ad37b",
+  "name": "MainPageScreen",
+  "symbol": "bg_mainpagescreen",
+  "tileColors": "",
+  "filename": "MainPageScreen.png",
+  "width": 20,
+  "height": 18,
+  "imageWidth": 160,
+  "imageHeight": 144
+}
