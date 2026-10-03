@@ -122,6 +122,38 @@
           "value": 1
         }
       }
+    },
+    {
+      "id": "ffe1a1e9-497b-4e40-bf1c-b41c828808b4",
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": {
+          "type": "number",
+          "value": 2
+        }
+      }
+    },
+    {
+      "id": "1a43b1ac-ac9b-4b2b-9ced-f7a1fac67462",
+      "command": "EVENT_RESET_VARIABLES",
+      "args": {}
+    },
+    {
+      "id": "74dbb842-ec16-4f8e-8442-8ea4bbd15499",
+      "command": "EVENT_SWITCH_SCENE",
+      "args": {
+        "sceneId": "6a080926-6564-4884-a629-b95bf33c1fa8",
+        "x": {
+          "type": "number",
+          "value": 9
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "direction": "down",
+        "fadeSpeed": "2"
+      }
     }
   ],
   "playerHit1Script": [],
